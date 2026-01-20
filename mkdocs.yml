@@ -1,0 +1,10 @@
+site_name: Thought Archives
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - python  
+    - cpp
+    - rust
+    - yaml
+    - json
