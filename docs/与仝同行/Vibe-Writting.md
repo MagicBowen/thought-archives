@@ -50,3 +50,7 @@ claude code 的写作风格（system prompt）
 
 将软件解耦为 《 10000 行的小模块，独立 vibe 完成! 减少 IDE，完全 vibe
 
+---
+
+提供知识，而非指令
+
