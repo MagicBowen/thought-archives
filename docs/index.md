@@ -3,7 +3,7 @@
 ---
 
 <br/>
-<div align="center"><img src="assets/images/thought-archives2.png" width="70%"></div>
+<div align="center"><img src="assets/images/thought-archives2.png" width="100%"></div>
 <br/>
 
 ---
