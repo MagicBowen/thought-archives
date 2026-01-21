@@ -26,7 +26,7 @@
 
 如下图，一个系统软件，依据对其软件构成的职责分工、功能复用和性能约束等维度的分析，将软件拆解划分到不同的逻辑层次和模块，制定好之间的接口和依赖关系，让各个模块可以相对独立地完成进一步的内部设计和开发，最后进行集成测试和交付。
 
-<div align="center"><img src="images/layer_module.png" width="40%"></div>
+<div align="center"><img src="images/layer_module.png" width="60%"></div>
 
 不难看出“分层分模块”方法通过分离和降解复杂度的方式，降低了软件系统整体的设计和开发的难度。除此之外更重要的是：它使得大规模软件可以由多个团队进行协作和并行设计开发，而且这一过程可以被工程化的管理起来。
 
@@ -62,7 +62,7 @@
 
 4+1视图最早由 Philippe Kruchten 在1995年的《IEEE Software》上发表的题为《The 4+1 View Model of Architecture》的论文中提出。
 
-<div align="center"><img src="images/4_1_view.png" width="40%"></div>
+<div align="center"><img src="images/4_1_view.png" width="60%"></div>
 </br>
 
 如上4+1视图通过将设计关注点划分到四个相互衔接的维度：逻辑视图，实现视图，部署视图，运行视图。这四个设计视图围绕着核心的用例场景视图，各自聚焦在一个设计切面，然后进行设计映射和衔接。
@@ -239,7 +239,7 @@ DDD 指出以“领域建模”为核心的设计方法对于复杂软件领域�
 
 下图是Martin Flower在《Patterns of Enterprise Application Architecture》一书中，给出的领域驱动设计与其它设计方法在项目不同阶段的成本对比。
 
-<div align="center"><img src="images/OIP-C.jpeg" width="50%"></div>
+<div align="center"><img src="images/OIP-C.jpeg" width="60%"></div>
 
 可以看到过早的使用领域驱动设计方法是高成本的！复杂系统中不同软件部分的变化频率和面对的核心挑战的差异是比较大的，一刀切的方式是不经济的。
 
@@ -263,7 +263,7 @@ Martin Flower在[《Is Design Dead?》](https://www.martinfowler.com/articles/de
 
 而在《领域驱动设计》中，Eric Evans 通过下图来说明，及时和频繁的代码重构正是演进领域模型的重要手段。
 
-<div align="center"><img src="images/DDD.png" width="40%"></div>
+<div align="center"><img src="images/DDD.png" width="60%"></div>
 
 因此，对于复杂的长生命周期软件来说，重构肯定不是一种运动，而是需要内建在软件的生命周期过程中，通过重构来不断的演进设计和实现，甚至借助重构过程来引进更新的基础设施和工程工具，提高整个组织进行演进式设计的能力。
 

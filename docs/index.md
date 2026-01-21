@@ -1,6 +1,10 @@
 # Welcome to ThoughtArchives
 
-*ThoughtArchives: 把“解决过的问题”归档，把“还没发生的变化”提前写下...*
+---
+
+<br/>
+<div align="center"><img src="assets/images/thought-archives2.png" width="70%"></div>
+<br/>
 
 ---
 
