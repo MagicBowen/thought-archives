@@ -1,5 +1,26 @@
+# 从 Vibe Coding 到 Vibe Writing
 
-# 从 Vibe Coding 到 Vibe Writting
+## 为什么要专门下一个 Vibe Writing 的 Agent，直接使用 Claude Code 不好吗？
+
+
+## AI 时代软件的技术选型 “光谱”
+
+
+## 模型的影响大吗？
+
+
+
+## 开发过程需要如何管理？
+
+
+## 未来的设计会如何做？
+
+
+## prompt 有哪些最佳实践？
+
+
+## 上下文管理有哪些最佳实践？
+
 
 
 claude code 比 n8n 等流编排的好处？
