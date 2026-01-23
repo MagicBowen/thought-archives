@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>基于模型的嵌入式软件开发者测试 - Thought Archives</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://MagicBowen.github.io/thought-archives/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%89%B4%20%20/developer-test-based-on-model/">
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">Thought Archives</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Welcome to ThoughtArchives
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#工具荐录-collapse" aria-expanded="false">
+                    工具荐录
+                </a>
+                <div class="collapse" id="工具荐录-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../%E5%B7%A5%E5%85%B7%E8%8D%90%E5%BD%95/mkdocs-tutorial/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            MkDocs：现代文档站点的优雅解决方案
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#工程实鉴---collapse" aria-expanded="false">
+                    工程实鉴  
+                </a>
+                <div class="collapse" id="工程实鉴---collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            基于模型的嵌入式软件开发者测试
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#碎思札记-collapse" aria-expanded="false">
+                    碎思札记
+                </a>
+                <div class="collapse" id="碎思札记-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../%E7%A2%8E%E6%80%9D%E6%9C%AD%E8%AE%B0/life-in-nowdays/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            你想活出怎样的人生？—— 在 “技术加速” 时代的自我问答
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#设计心法-collapse" aria-expanded="false">
+                    设计心法
+                </a>
+                <div class="collapse" id="设计心法-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../%E8%AE%BE%E8%AE%A1%E5%BF%83%E6%B3%95/from-software-to-ecosystem/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            从软件产品到软件生态
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../%E8%AE%BE%E8%AE%A1%E5%BF%83%E6%B3%95/system-evolutionary-design/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            复杂嵌入式系统软件的演进式设计
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../../%E5%B7%A5%E5%85%B7%E8%8D%90%E5%BD%95/mkdocs-tutorial/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../../%E7%A2%8E%E6%80%9D%E6%9C%AD%E8%AE%B0/life-in-nowdays/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="_1">基于模型的嵌入式软件开发者测试</h1>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#_1">基于模型的嵌入式软件开发者测试</a><ul>
+<li><a href="#_2">引言</a></li>
+<li><a href="#_3">开发者测试</a></li>
+<li><a href="#_4">基于模型的测试</a></li>
+<li><a href="#_5">环境模型</a></li>
+<li><a href="#_6">交互模型</a></li>
+<li><a href="#_7">测试过程</a></li>
+<li><a href="#_8">项目案例</a></li>
+<li><a href="#_9">总结</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="_2">引言</h2>
+<p>开发者测试，作为一项现代软件工程的最佳实践，通过将测试活动左移，可以有效地帮助软件团队尽早发现问题，反向推动软件设计和代码质量的提升，达成质量内建。</p>
+<p>然而对于嵌入式系统软件，由于软件的运行依赖专有的硬件设备和逻辑资源，软件组件之间也存在紧密的协作关系，因此执行开发者测试活动的难度和成本相对比较大。</p>
+<p>本文提出一种基于模型的组件级开发者测试方法，这种方法相对成本可控、测试用例的可理解性和可维护性较好，可以提升嵌入式系统软件的开发者测试的效率和质量。</p>
+<h2 id="_3">开发者测试</h2>
+<p>开发者测试是从<strong>测试角色</strong>角度定义的一项测试活动，指软件开发人员在开发软件的过程中，通过编写测试用例、执行测试用例、分析测试结果等活动，来发现软件中存在的问题，从而尽早提升软件的质量。由于开发者对软件的实现细节和内部逻辑比较熟悉，因此开发者测试可以发现软件中的一些隐蔽问题，例如：边界条件、异常处理、资源泄露等。同时这些用例也可以作为软件的回归测试用例，帮助软件团队在软件迭代过程中保证软件的质量。</p>
+<p>在复杂的嵌入式系统软件中，由于大部分开发者只开发和维护整体软件的一部分，而开发者测试用例的设计又难以逾越开发者所理解的业务知识范围和代码范围，因此开发者测试用例覆盖的范围一般圈定在单元级别，最高到组件（或者模块）级别。</p>
+<p>针对单元测试，嵌入式系统软件可以采用成熟的单元测试框架，如 GoogleTest 或 Catch2。对于被测代码的外部依赖可以使用 Mockcpp 等框架进行打桩。</p>
+<p>由于越细节的代码的稳定性越低，如果软件本身又缺乏良好的局部设计，则不可避免的单元测试用例就会比较脆弱。这种情况下，即使代码进行局部的重构也会引起单元测试用例的同步修改，因此在大多数嵌入式软件团队中，单元测试都不容易被作为回归测试和防护网使用。</p>
+<p>相比之下，组件（或者模块）级代码，对外接口相对稳定，整体具有一定业务含义，理论上这一级别的测试用例的可理解性和可维护性相比单元测试要好，测试用例也会更稳定性。因此很多嵌入式系统软件团队刚开始实施开发者测试，都更倾向于先选择从组件或模块级测试入手。</p>
+<p>但由于组件的正常运行依赖环境配置和初始化，同时被测组件与外部组件之间存在协作关系，还可能依赖不同的底层硬件和资源，这导致组件级别的开发者测试往往需要借助自研的测试基座完成上述组件环境准备、拉起、调度和硬件模拟，否则组件测试难以开展。</p>
+<p>有一些团队直接借助单元级测试用例的框架和技术作为组件级开发者测试的基座，这容易导致用例开发人员分别对底层硬件和外部依赖进行大量的重复打桩或 Mock，导致组件测试用例和被测代码的实现耦合，导致测试用例比较脆弱（如下图示例）。因此组件级的开发者测试往往需要借助一些业务定制化框架，测试用例的设计和实现也需要和单元测试不同。</p>
+<div align="center"><img src="images/unittest.png" width="60%"></div>
+<p></br></p>
+<p>还有一种做法是借助 Qemu 做仿真测试环境，模拟软件依赖的底层硬件和系统能力，这样就可以在 PC 上运行仿真系统执行测试用例。但是这种方法需要对 Qemu 进行定制，仿真的成本比较高，需要专门的仿真开发团队进行维护演进，在面对众多的开发者测试定制需求时容易响应不及时，同时基于仿真环境的测试用例的执行效率也不高。基于仿真的测试往往适合用于做系统级测试，但是对于组件阶段的开发者测试来说，我们期望有其它更轻量级的可以由每个组件团队自行实施和演进的方法。</p>
+<p>后文我们介绍一种基于模型的组件级开发者测试方法，它的代价相对可控，从效果上看可以提升组件级开发者测试的执行效率和质量，可以作为对现有嵌入式系统软件的开发者测试方法的一种补充。</p>
+<h2 id="_4">基于模型的测试</h2>
+<p>基于模型的测试（Model-Based Testing, MBT）是一种测试方法，它对被测组件的外部依赖和交互行为进行建模，基于模型对组件进行测试用例的设计和实现。</p>
+<p>对于一个嵌入式组件来说，其外部依赖按照阶段可以分为 初始配置依赖 和 运行时接口依赖。初始配置主要是该组件依赖的环境、资源等数据配置，经过初始化后保存在被测组件代码内的全局变量或者单例类对象中。运行时依赖主要是该组件对其它组件的运行时接口调用或对应的消息响应的依赖，在代码中体现为对外的函数调用或者期待的外部消息。而嵌入式组件对底层硬件的依赖，有一部分通过初始化配置传入，另一部分则表现为运行时对底层硬件接口的调用依赖。</p>
+<p>在做单元测试的时候，由于上述依赖分散在每个被测的类或者函数中，因此我们往往独立的为每个被测类或者被测函数准备依赖，例如会单独为被测函数准备好入参，初始化其依赖的全局变量，并对其调用的外部函数直接打桩或者Mock。这时我们很少全局去思考这些全局变量、外部依赖接口以及初始化配置 与 被测代码之间的整体关系，因为这些关系往往是隐式的和分散的。</p>
+<p>而当我们站在组件整体的角度进行思考时，则可以把组件需要初始化的配置、以及所有对外依赖的接口的语义信息全部抽取出来进行整顿，这时可以抽象成两个模型，<strong>环境模型</strong> 和 <strong>交互模型</strong>。</p>
+<p><strong>环境模型</strong>，对于嵌入式系统也可以认为是组件所依赖的硬件模型，或者设备模型。具体可以包含组件所依赖的硬件、拓扑以及资源配置等，表达了组件运行前所依赖的外部环境信息。环境模型用于在更高的语义级别上去整体描述组件在测试时的前置环境或者硬件条件，而不是在每个测试用例中针对细节实现去单独配置或者打桩。</p>
+<p><strong>交互模型</strong>，用于描述组件和其依赖组件之间的同步或者异步交互过程，包含交互的时序、消息或者参数的内容等。交互模型用于在测试用例中描述被测组件和其依赖组件之间的业务交互流程，通过描述外部组件对被测组件的消息输入来激励被测组件执行，并对被测组件的输出进行断言。这样我们可以在测试用例里站在组件的交互的时序关系上描述用例并进行断言，而不是在每个测试用例里面直接调用被测组件的函数接口并对其依赖函数进行打桩或 Mock。</p>
+<p>基于上述两个模型，我们就可以从组件整体的角度去思考组件的环境依赖和每个用例中对应业务的交互行为，而不是从局部代码细节角度去思考，从而让测试用例更容易体现业务语义更易理解，同时又不会让测试和具体的代码细节耦合，提高用例的稳定性。</p>
+<p>在具体实施中，我们为环境模型和交互模型设计分别设计一种DSL，让用例编写人员使用DSL进行用例开发。我们将DSL背后的代码封装成一个通用的库，开发者只用将库的代码与自己的开发者测试工程集成，就可以将其叠加在已有的测试框架上，然后引用两种DSL来进行组件级别的开发者测试用例编写。</p>
+<p>下图简单示例一个设备模型的DSL描述（使用C++语言实现），该示例中以类似设备树的结构描述了被测组件所依赖的底层硬件配置和拓扑结构，框架会在测试用例执行前用其初始化被测组件。</p>
+<div align="center"><img src="images/device.png" width="50%"></div>
+
+<p>下图示例了一个使用交互模型表达的测试用例，其中描述了被测组件和其依赖组件之间的业务交互过程，包括交互的时序、消息的内容以及断言。</p>
+<div align="center"><img src="images/comm.png" width="50%"></div>
+
+<p>上面的交互过程等价于如下的业务场景时序图设计：</p>
+<div align="center"><img src="images/seq-diagram.png" width="50%"></div>
+
+<p>后文我们分别讲解环境模型和交互模型的主要设计和使用方法。</p>
+<h2 id="_5">环境模型</h2>
+<p>环境模型描述了被测组件运行前所依赖的外部环境信息，用于在更高的语义级别上去描述组件在测试时的前置环境或者硬件条件。</p>
+<p>对于嵌入式设备，对运行环境的依赖，主要是对底层的硬件和资源配置的依赖。由于资源配置大多也是寄宿在对应的硬件上的，因此我们需要抽象组件底层的设备资源模型结构，将其抽象成环境模型。</p>
+<p>对于硬件设备模型，往往是一颗树状结构，例如按照 “架 -&gt; 框 -&gt; 槽 -&gt; 单板 -&gt; 器件” 的树状结构展开。因此我们需要根据自己的场景定义我们的“设备树”上的节点类型，以及具备的属性。</p>
+<p>如下图所示，需要先提炼被测组件的业务流程所依赖的环境和硬件信息，然后使用环境模型DSL进行描述（下图最右边），然后基于环境模型框架对外提供的接口来具体实现代码中所依赖的桩接口，并使用环境模型来初始化被测组件（下图中间，在组件的测试框架中只用全局实现一遍）。</p>
+<p>这样当被测代码执行中调用桩接口（或者访问自己的全局变量），实际访问的数据或者逻辑信息来自于环境模型的配置（框架会保证在测试用例依赖的环境模型变化的时候，自动重新初始化被测组件并更新桩函数的内部数据）。</p>
+<div align="center"><img src="images/device-dsl.png" width="90%"></div>
+
+<p>简而言之，就是使用环境模型的DSL描述被测组件所依赖的外部设备拓扑关系，将环境信息变成设备节点、属性或者拓扑关系，将其作为一组测试用例的前置条件。测试框架中会通过被测组件的初始化接口将环境模型的描述的信息应用到被测组件中，刷新被测组件的全局变量，并同时使用环境模型的框架接口获取环境信息来实现被测代码所依赖的桩函数。</p>
+<p>由于框架会保证每个测试用例执行前，将最新的环境模型的配置更新到被测组件中的全局变量和桩接口中。因此每个测试用执行时，可以认为被测组件就被初始化在了对应的硬件结构和资源配置之上了。测试用例开发人员可以按照自己的想法，为不同的测试用例构造不同的环境模型描述，这样就能做到将组件配置在不同的硬件或环境下对其进行功能测试。</p>
+<p>而对于组件测试框架的开发者，第一次与环境模型DSL框架集成的时候，需要定义被测组件的环境模型中允许出现的节点和属性，并通过环境模型的接口将环境模型中的信息桥接到组件的初始化接口和桩接口中（该工作只用做一次）。而组件的测试用例的开发者则不用关系这些细节。</p>
+<p>环境模型的拓扑关系一般用树状结构就足以表达了，如果环境拓扑是DAG图状关系（如网络结构等），可以先用树状DSL描述图的主要结构，然后再通过补边的方式描述出完整的DAG图的拓扑关系。在和一项与AI图引擎框架有关的技术合作过程中，我们设计了一套图DSL用于在测试用例中描述神经网络的DAG信息和结构，并在测试用例执行的时候将图的结构以acsii码的形式打印在终端上帮助更好的可视化以及形成文档。因此环境模型的DSL表达，可以做到表达类似设备树的树状结构拓扑，也支持表达类似网络拓扑的图状结构，这样对于各种环境模型的描述就相对完备了。</p>
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">//  data   constant</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">//   \         /</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">//    \       /</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">//     squeezev3</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">//       |</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">//      netoutput</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">DEF_GRAPH</span><span class="p">(</span><span class="n">graph_squeezev3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">CHAIN</span><span class="p">(</span><span class="n">NODE</span><span class="p">(</span><span class="s">&quot;data_x&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data_x</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">EDGE</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">NODE</span><span class="p">(</span><span class="s">&quot;squeezev3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">squeezev3</span><span class="p">));</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">CHAIN</span><span class="p">(</span><span class="n">NODE</span><span class="p">(</span><span class="s">&quot;constant_axes&quot;</span><span class="p">,</span><span class="n">constant_axes</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">EDGE</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">NODE</span><span class="p">(</span><span class="s">&quot;squeezev3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">squeezev3</span><span class="p">));</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">CHAIN</span><span class="p">(</span><span class="n">NODE</span><span class="p">(</span><span class="s">&quot;squeezev3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">squeezev3</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">EDGE</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">NODE</span><span class="p">(</span><span class="s">&quot;netoutput&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">netouput</span><span class="p">));</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">};</span>
+</span></code></pre></div>
+<h2 id="_6">交互模型</h2>
+<p>复杂的嵌入式系统软件中，一个组件往往需要和其它组件进行交互协作才能完成一个完整的业务场景。软件设计人员一般会用顺序图来描述业务场景的组件交互过程，这样能清晰的展示出该业务场景中涉及的所有组件、组件交互的时序过程、以及交互中传递的消息内容等。</p>
+<p>在业务场景用例的顺序图中，如果我们选择其中一个组件作为被测组件，为了激励被测组件完成该完整的业务场景用例，一般我们需要对与它协作的其它外部组件进行打桩，模拟它们给被测组件发送消息，或者接收被测组件发出的消息对其进行断言，并返回预期的响应给被测组件。</p>
+<p>例如对于如下业务场景用例时序图，我们选择其中一个组件作为被测组件（Component），与其交互的外部组件我们统称为测试Actor。这些Actor需要按照时序图中规定的顺序和消息来扮演外部组件，并与被测组件进行互动以激励业务场景用例的完整执行。</p>
+<div align="center"><img src="images/seq-diagram.png" width="50%"></div>
+
+<p>在上述的测试过程中，涉及到如下几个要素：1）定义被测组件的外部协作组件（Actor）；2）描述Actor和被测组件的交互时序过程；3）对于Actor发送的消息，需要构造发送消息的内容；4）对于Actor接收的消息，需要断言收到的消息内容；</p>
+<p>交互模型首先要能够定义所有与被测组件协作的外部Actor，这些Actor要具备收发消息（或者是触发同步接口调用）的能力。</p>
+<div align="center"><img src="images/actor.png" width="50%"></div>
+
+<p>接下来要能够在每个用例中使用这些Actor按照顺序图中的时序要求进行交互，包括填充消息、发送消息、接收消息、断言消息内容等。</p>
+<div align="center"><img src="images/comm.png" width="50%"></div>
+
+<p>这样利用交互模型，我们就可以根据每个业务场景的顺序图设计，为被测组件设计对应的测试用例。在测试用例中，我们定义业务场景中和被测组件协作的外部Actor，然后通过Actor收发消息来激励被测组件完成整个业务用例的执行。框架会自动判断被测组件是否按照预期的交互时序和消息内容完成执行用例。</p>
+<p>这里面有一个关键的问题，就是如何能低成本的定义Actor发送的消息内容。因为对于复杂的嵌入式系统软件，组件之间交互的消息内容中包含的属性值非常多，如果每个用例中都需要手动的填充这些消息内容，就会导致不同用例间存在大量的填充消息的重复代码，也会导致用例非常冗长，可理解性变差。</p>
+<p>对于上面的问题，我们在框架中定义了如下四个阶段的消息构造过程，尽量把消息的填充工作让框架来完成，降低具体用例中需要填充的消息内容。</p>
+<ul>
+<li>为每个消息封装为一个类，在类的构造过程中先为消息内容填上全局的默认值，保证每个消息实例被构造出来的时候都有一套完整的默认消息内容。</li>
+<li>如果每组测试用例定义了环境模型，框架会用环境模型中的信息对消息进行增量初始化，保证消息中和环境配置相关的属性内容被正确替换。</li>
+<li>每个Actor在发送消息前，框架会使用Actor的私有信息对消息再做一次初始化，保证消息中和其发送Actor有关的属性内容被正确替换。</li>
+<li>最后，每个测试用例中只需要对该用例中需要增量修改的消息内容进行调整，同时修改时优先调用消息类的接口，保证测试用例不和消息的结构体定义耦合。</li>
+</ul>
+<p>上述四步中的前三步，由组件测试框架的开发者第一次与交互模型DSL框架集成的时候进行定义，后面的测试用例开发者只需要关注第四步，即按需在用例中对需要的消息内容做少量增量调整，就可以完成测试用例的编写。</p>
+<p>基于上面的设计，大部分测试用例中都不存在冗长的手动消息内容填充，这降低了测试用例的编写成本，也让测试用例更加简洁，提高了测试用例的可理解性。</p>
+<h2 id="_7">测试过程</h2>
+<p>在上面的测试方法中，我们利用环境模型来为被测组件准备不同的环境上下文（包含组件依赖的底层硬件、拓扑和配置信息），然后利用交互模型来在测试用例中描述业务场景的时序交互过程，对被测组件的交互顺序和输出的消息内容进行断言，这样就能够站在比较高的语义层面直接对组件进行面向业务的开发者测试了。</p>
+<p>这一测试过程，可以和<strong>需求实例化</strong>的方法结合起来使用。</p>
+<p>需求实例化是一种软件设计方法，要求组件设计过程中，对组件的业务场景进行分析，以测试 example 的形式输出业务场景用例。而结合我们前面介绍的测试方法，可以直接把需求实例化的输出结果用可执行的自动化测试用例表达出来，作为对组件的功能验收测试。</p>
+<div align="center"><img src="images/usecase.png" width="90%"></div>
+
+<p>如上图，传统的需求分析后，会对每一 usecase 用顺序图描述场景交互过程。而需求实例化则会把场景用如下的测试用例直接表达出来。</p>
+<div align="center"><img src="images/testcase.png" width="60%"></div>
+
+<p>这样就做到了将需求实例化的输出结果直接变成可执行的验收测试用例，将测试设计左移到了软件设计阶段。</p>
+<p>另外，基于模型的测试比较适合作为组件级别的功能测试。这里我们将组件作为黑盒，从业务的角度对组件进行测试。从测试完备性上来说，这种组件功能测试不能完全替代单元测试和真实环境的集成测试。</p>
+<p>单元测试有助于发现代码细粒度覆盖上的问题，而集成测试有助于发现组件之间理解不一致的问题以及组件部署在真实硬件上的问题。但是有了上文所述的组件的功能级黑盒测试，至少可以做到对组件的所有纯软件功能进行提前和细致的测试，因此比较适合作为组件的功能验收测试。另外由于它的稳定性和可重复性，也比较适合作为组件的回归测试。</p>
+<p>最后，前文所述的交互模型背后存在一个调度器，用于进行消息调度，激励被测组件的执行。调度器对于测试用例是看不到的，测试用例只用描述交互时序（包括显示的指示定时器事件的发生），调度器会自动根据交互模型的描述进行底层的调度模拟。我们的经验是，组件的功能验收用例主要用于确保组件的业务逻辑的正确性，这时交互模型底层的调度器一般实现为串行调度，尽量不要去模拟真实环境下的并发（或并行）调度。并发调度容易引起测试用例的不确定性，让测试用例的可重复性变差，不利于测试用例的回归测试。</p>
+<p>如果要做并发测试，推荐的做法是单独拎出一个测试集，在里面将交互调度器配置为并发调度。并发测试集中的可以针对并发专门设计少量非常复杂的组合场景用例，在断言中除了判断业务逻辑的一致性，还可以增加对各种系统资源（如内存释放、锁释放、以及其它各种资源的数量）的状态判断。另外可以在该用例集的构建工程中打开<code>ASAN</code>和<code>TSAN</code>，借助这两个工具来检查并发时的内存和竞争问题。</p>
+<p>总之，在测试工程的搭建和执行中，尽量将用于回归的功能测试用例和用于探索并发问题的测试用例分开，这样可以让每种测试用例职责单一，保证测试用例的简单性，以及保障回归测试的稳定性和可重复性。</p>
+<h2 id="_8">项目案例</h2>
+<p>上面介绍的方法是在与客户的技术合作项目中试点的，以下是一段原型代码，可以看到基于模型的测试用例代码比较简洁。右边的测试用例上半部分是在定义环境模型，其描述的内容和下图左上部分的硬件拓扑模型是一致的。右下部分是一个测试用例，其描述的内容和下图左下部分的业务时序图是一致的。</p>
+<div align="center"><img src="images/netm.png" width="90%"></div>
+<p></br></p>
+<p>在和客户合作的时候，环境模型和交互模型的DSL是专门为其定制的，团队反馈这两个模型及其DSL部分的代码还是有一定的门槛的。后来为了降低难度，我们把环境模型和交互模型中公共的代码抽象出来，形成了通用的DSL框架，这样其他组件的同学就可以直接复用该框架，将其与自己的开发者测试工程进行集成和适配，而不用关心DSL和模型框架底层的实现细节了。</p>
+<h2 id="_9">总结</h2>
+<p>本文介绍了一种面向嵌入式系统软件的基于模型的组件开发者测试方法，该方法可以让组件开发者站在比较高的语义层面，直接对组件进行面向业务的开发者测试，而不用关心组件的具体实现细节。该方法的核心是利用环境模型来为被测组件准备不同的环境上下文，利用交互模型来在测试用例中描述业务场景的时序交互过程，并对被测组件的交互顺序和输出的消息内容进行断言。这样就能够站在比较高的语义层面直接对组件进行面向业务的开发者测试了。该方法作为一种针对组件级的轻量级功能测试方法，可以作为对嵌入式系统软件开发者测试方法的一种补充。</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
