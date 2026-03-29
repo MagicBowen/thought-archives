@@ -8,13 +8,17 @@
       {%- if item.children %}
         <details class="ta-tree-group"{% if item.active and not page_is_homepage %} open{% endif %}>
           <summary class="ta-tree-folder{% if item.active %} is-active{% endif %}">
+            <span class="ta-tree-expander" aria-hidden="true"></span>
+            <span class="ta-tree-node-icon ta-tree-node-icon-folder" aria-hidden="true"></span>
             <span class="ta-tree-folder-label">{{ item.title }}</span>
           </summary>
           {{ render_nav(item.children, level + 1, page_is_homepage) }}
         </details>
       {%- else %}
         <a href="{{ item.url|url }}" class="ta-tree-link{% if item.active %} is-active{% endif %}" {% if item.active %}aria-current="page"{% endif %}>
-          {{ item.title }}
+          <span class="ta-tree-expander ta-tree-expander-placeholder" aria-hidden="true"></span>
+          <span class="ta-tree-node-icon ta-tree-node-icon-page" aria-hidden="true"></span>
+          <span class="ta-tree-link-label">{{ item.title }}</span>
         </a>
       {%- endif %}
     </li>
@@ -60,8 +64,10 @@
 <div class="ta-layout{% if not page.is_homepage and page.toc %} has-toc{% endif %}">
   <aside class="ta-sidebar-panel">
     <div class="ta-panel ta-sidebar">
-      <h2 class="ta-panel-title">Directories</h2>
-      {{ render_nav(nav.items, page_is_homepage=page.is_homepage) }}
+      <h2 class="ta-panel-title">目录</h2>
+      <div class="ta-sidebar-tree-shell">
+        {{ render_nav(nav.items, page_is_homepage=page.is_homepage) }}
+      </div>
     </div>
   </aside>
 
