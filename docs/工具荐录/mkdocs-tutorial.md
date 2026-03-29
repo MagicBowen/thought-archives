@@ -154,4 +154,4 @@ MkDocs 提供了一个**稳定的内核**：目录约定、构建流程、搜索
 
 ---
 
-**标签：** mkdocs, DIY theme, vibe coding, codex, 技术博客
+**标签：** mkdocs, DIY theme, vibe coding, codex, 柔性软件

@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import os
 import re
+import subprocess
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path, PurePosixPath
 from typing import Iterable
 
@@ -130,6 +132,41 @@ def _fallback_mtime(path: Path) -> datetime:
     return datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
 
 
+@lru_cache(maxsize=None)
+def _git_last_updated(repo_root: str, repo_relative_path: str) -> datetime | None:
+    try:
+        result = subprocess.run(
+            ["git", "log", "--follow", "-1", "--format=%cI", "--", repo_relative_path],
+            cwd=repo_root,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+
+    value = result.stdout.strip()
+    if not value:
+        return None
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+@lru_cache(maxsize=None)
+def _is_git_dirty(repo_root: str, repo_relative_path: str) -> bool:
+    try:
+        result = subprocess.run(
+            ["git", "status", "--porcelain", "--", repo_relative_path],
+            cwd=repo_root,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return True
+
+    return bool(result.stdout.strip())
+
+
 def _section_label(src_uri: str) -> str:
     parts = PurePosixPath(src_uri).parts
     if len(parts) <= 1:
@@ -160,6 +197,7 @@ def on_page_content(html, page, config, files):
 
 def on_nav(nav, config, files):
     docs_root = Path(config.docs_dir)
+    repo_root = Path(config.config_file_path).resolve().parent
     posts = []
 
     for page in _collect_pages(nav.items):
@@ -168,8 +206,13 @@ def on_nav(nav, config, files):
 
         src_uri = page.file.src_uri
         source_path = docs_root / src_uri
+        repo_relative_path = os.path.relpath(source_path.resolve(), repo_root)
         markdown = source_path.read_text(encoding="utf-8")
-        updated_at = _fallback_mtime(source_path)
+        git_updated_at = _git_last_updated(str(repo_root), repo_relative_path)
+        if git_updated_at is not None and not _is_git_dirty(str(repo_root), repo_relative_path):
+            updated_at = git_updated_at
+        else:
+            updated_at = _fallback_mtime(source_path)
         date_label = updated_at.astimezone().strftime("%Y-%m-%d %H:%M")
         excerpt = _extract_excerpt(markdown)
         title = page.title or _extract_title(markdown, page.file.name)
@@ -191,6 +234,7 @@ def on_nav(nav, config, files):
             }
         )
 
+    posts.sort(key=lambda item: item["src_uri"])
     posts.sort(key=lambda item: item["date"], reverse=True)
     config.extra["archive_posts"] = posts
     return nav
