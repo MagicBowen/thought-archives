@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
-{% macro render_nav(items, level=0) -%}
+{% macro render_nav(items, level=0, page_is_homepage=false) -%}
   <ul class="{{ 'ta-tree' if level == 0 else 'ta-tree-children' }}">
   {%- for item in items %}
     {%- if not (item.is_homepage and level == 0) %}
     <li class="ta-tree-item">
       {%- if item.children %}
-        <div class="ta-tree-folder{% if item.active %} is-active{% endif %}">{{ item.title }}</div>
-        {{ render_nav(item.children, level + 1) }}
+        <details class="ta-tree-group"{% if item.active and not page_is_homepage %} open{% endif %}>
+          <summary class="ta-tree-folder{% if item.active %} is-active{% endif %}">
+            <span class="ta-tree-folder-label">{{ item.title }}</span>
+          </summary>
+          {{ render_nav(item.children, level + 1, page_is_homepage) }}
+        </details>
       {%- else %}
         <a href="{{ item.url|url }}" class="ta-tree-link{% if item.active %} is-active{% endif %}" {% if item.active %}aria-current="page"{% endif %}>
           {{ item.title }}
@@ -57,7 +61,7 @@
   <aside class="ta-sidebar-panel">
     <div class="ta-panel ta-sidebar">
       <h2 class="ta-panel-title">Directories</h2>
-      {{ render_nav(nav.items) }}
+      {{ render_nav(nav.items, page_is_homepage=page.is_homepage) }}
     </div>
   </aside>
 

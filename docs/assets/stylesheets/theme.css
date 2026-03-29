@@ -68,6 +68,22 @@ a {
   padding: 18px;
 }
 
+.ta-sidebar-panel .ta-panel {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.ta-sidebar {
+  padding: 6px 4px 6px 0;
+}
+
+.ta-sidebar .ta-panel-title {
+  margin-bottom: 12px;
+  padding-left: 12px;
+}
+
 .ta-panel-title {
   margin: 0 0 14px;
   color: #6b7280;
@@ -87,44 +103,89 @@ a {
 
 .ta-tree {
   display: grid;
-  gap: 6px;
+  gap: 2px;
 }
 
 .ta-tree-item {
-  padding: 4px 0;
+  position: relative;
+  padding: 0;
+}
+
+.ta-tree-group {
+  display: grid;
+  gap: 2px;
 }
 
 .ta-tree-folder {
-  padding: 6px 0;
-  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 2.2rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 12px;
+  color: #374151;
   font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.ta-tree-folder::-webkit-details-marker {
+  display: none;
+}
+
+.ta-tree-folder::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: 0 0 auto;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-1px) rotate(-45deg);
+  transition: transform 0.18s ease;
+}
+
+.ta-tree-group[open] > .ta-tree-folder::before {
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.ta-tree-folder-label {
+  min-width: 0;
+}
+
+.ta-tree-folder:hover {
+  background: rgba(15, 23, 42, 0.045);
+  color: #111827;
 }
 
 .ta-tree-folder.is-active {
   color: #1d4ed8;
+  background: rgba(37, 99, 235, 0.08);
 }
 
 .ta-tree-children {
   display: grid;
-  gap: 4px;
-  margin: 6px 0 0 14px;
-  padding-left: 12px;
-  border-left: 1px solid #e5e7eb;
+  gap: 2px;
+  margin: 0 0 0 12px;
+  padding-left: 14px;
+  border-left: 1px solid rgba(148, 163, 184, 0.4);
 }
 
 .ta-tree-link {
   display: block;
-  padding: 6px 8px;
-  border-radius: 10px;
+  min-height: 2.1rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 12px;
   color: #6b7280;
   line-height: 1.45;
   font-size: 0.94rem;
+  transition: background-color 0.18s ease, color 0.18s ease;
 }
 
 .ta-tree-link:hover,
 .ta-tree-link.is-active {
   color: #1d4ed8;
-  background: #eff6ff;
+  background: rgba(37, 99, 235, 0.08);
 }
 
 .ta-home-content {
@@ -395,6 +456,11 @@ html[data-bs-theme="dark"] .ta-panel {
   border-color: #243041;
 }
 
+html[data-bs-theme="dark"] .ta-sidebar-panel .ta-panel {
+  background: transparent;
+  border-color: transparent;
+}
+
 html[data-bs-theme="dark"] .ta-home-content,
 html[data-bs-theme="dark"] .ta-archive-toolbar,
 html[data-bs-theme="dark"] .ta-archive-item,
@@ -402,6 +468,11 @@ html[data-bs-theme="dark"] .ta-article-head,
 html[data-bs-theme="dark"] .ta-tree-children,
 html[data-bs-theme="dark"] .ta-article-content hr {
   border-color: #243041;
+}
+
+html[data-bs-theme="dark"] .ta-tree-folder:hover {
+  background: rgba(148, 163, 184, 0.12);
+  color: #f3f4f6;
 }
 
 html[data-bs-theme="dark"] .ta-tree-link:hover,
@@ -416,6 +487,10 @@ html[data-bs-theme="dark"] .ta-article-path a:hover,
 html[data-bs-theme="dark"] .ta-toc-link:hover,
 html[data-bs-theme="dark"] .ta-toc-link.ta-toc-level-1 {
   color: #93c5fd;
+}
+
+html[data-bs-theme="dark"] .ta-tree-folder.is-active {
+  background: rgba(37, 99, 235, 0.16);
 }
 
 html[data-bs-theme="dark"] .ta-article-content {
