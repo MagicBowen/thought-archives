@@ -1,12 +1,8 @@
 # Welcome to ThoughtArchives
 
----
-
 <br/>
 <div align="center"><img src="../assets/images/thought-archives2.png" width="100%"></div>
 <br/>
-
----
 
 做技术咨询越久，就越确定一件事：行业里最稀缺的，从来不是“知道某个框架或工具怎么用”，而是**在复杂约束下把事情做成**的能力。
 

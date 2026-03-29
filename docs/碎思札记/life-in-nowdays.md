@@ -1,12 +1,8 @@
 # 你想活出怎样的人生？—— 在 “技术加速” 时代的自我问答
 
----
-
 <br/>
 <div align="center"><img src="life-in-nowdays/images/life-selections.png" width="100%"></div>
 <br/>
-
----
 
 时代像一辆加速的列车。技术把世界推得更快，AI把能力边界推得更远；旧的确定性被不断掀开，新的不确定性又迅速覆盖上来。
 

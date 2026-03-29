@@ -1,12 +1,8 @@
 # 从软件产品到软件生态
 
----
-
 <br/>
 <div align="center"><img src="from-software-to-ecosystem/images/software-bridge.png" width="100%"></div>
 <br/>
-
----
 
 很多人谈“做产品”，容易落到功能清单、交互细节、增长手段上；而一谈“做软件”，又容易陷入技术架构、性能、工程实践里。可真正能走向“成功”的软件产品，往往不止是把功能做全、把代码写好——它更像是在世界上**搭起一座桥**。
 
