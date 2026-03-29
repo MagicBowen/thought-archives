@@ -10,7 +10,7 @@ AI Agent 的兴起，让工具软件的技术栈选型变得逐渐多元化。�
 
 把当前可用的技术方案按照从 "灵活性" 到 "确定性" 从左到右进行排列，大致可以分成如下几个主要分界点：
 
-![AI Agent 技术选型光谱](../assets/images/tech-stack-spectrum.png)
+![AI Agent 技术选型光谱](assets/images/tech-stack-spectrum.png)
 
 **1：让 LLM "扮演"**
 

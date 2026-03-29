@@ -1,6 +1,8 @@
-site_name: Thought Archives
+site_name: ThoughtArchives / 思想档案
 site_url: https://MagicBowen.github.io/thought-archives
 repo_url: https://github.com/MagicBowen/thought-archives
+repo_name: GitHub
+site_description: 把“解决过的问题”归档，把“还没发生的变化”提前写下。
 use_directory_urls: true
 markdown_extensions:
   - pymdownx.highlight:
@@ -11,6 +13,25 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 plugins:
-  - search       
+  - search
+hooks:
+  - hooks/site_hooks.py
+extra_css:
+  - assets/stylesheets/theme.css
+extra_javascript:
+  - assets/javascripts/theme-mode.js
+watch:
+  - theme_overrides
+  - hooks
+  - docs/assets/stylesheets
+  - docs/assets/javascripts
 theme:
-  name: dracula
+  name: mkdocs
+  locale: zh_CN
+  color_mode: light
+  user_color_mode_toggle: true
+  nav_style: light
+  highlightjs: true
+  hljs_style: github
+  hljs_style_dark: github-dark
+  custom_dir: theme_overrides

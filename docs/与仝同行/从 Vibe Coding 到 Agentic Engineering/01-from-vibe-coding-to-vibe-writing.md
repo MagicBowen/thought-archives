@@ -1,6 +1,6 @@
 # Dogent 的诞生：从 Vibe Coding 到 Vibe Writing
 
-![](../assets/images/dogent-banner.png)
+![](assets/images/dogent-banner.png)
 
 作为一名顾问，我经常需要撰写各种技术文档。这个过程中自然少不了借助 AI 来辅助调研、润色、排版与校对。
 

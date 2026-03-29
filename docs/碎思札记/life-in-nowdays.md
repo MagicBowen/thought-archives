@@ -3,7 +3,7 @@
 ---
 
 <br/>
-<div align="center"><img src="images/life-selections.png" width="100%"></div>
+<div align="center"><img src="life-in-nowdays/images/life-selections.png" width="100%"></div>
 <br/>
 
 ---

@@ -10,7 +10,7 @@
 
 前文提到的 AI Agent 时代工具软件开发的技术选型光谱，从 "灵活性" 到 "确定性" 依次排列着：让 LLM 直接 "扮演"、配置通用 Agent "扮演"、基于动态 Agent SDK 开发、静态编排类 Agent、传统确定性程序。Dogent 选择了基于 Claude Agent SDK 开发，技术选型位置在分界点 3。
 
-![](../assets/images/agent-sdk.png)
+![](assets/images/agent-sdk.png)
 
 为什么不直接配置 Claude Code（分界点 2）？写作场景需要的定制程度超出了配置能提供的范围：系统提示词不能完全控制，交互方式（比如大纲编辑器）无法定制，工具集成（比如 PDF 生成、自定义视觉分析）不够深入。
 
@@ -197,7 +197,7 @@ Dogent 支持切换多种 LLM API，除了 Claude（包括通过 POE 代理的 C
 
 AI Runtime 层把稳定的 Agent Loop、LLM 分派、文件读写、工具调用、多 Agent 调度协同的能力封装起来，在不同虚拟隔离空间中推理和执行不同 Agent 应用中的配置规则和技能。
 
-![](../assets/images/agent-runtime.png)
+![](assets/images/agent-runtime.png)
 
 这个 AI Runtime 的特点是什么？
 

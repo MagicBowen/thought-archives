@@ -3,7 +3,7 @@
 ---
 
 <br/>
-<div align="center"><img src="images/software-bridge.png" width="100%"></div>
+<div align="center"><img src="from-software-to-ecosystem/images/software-bridge.png" width="100%"></div>
 <br/>
 
 ---

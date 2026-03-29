@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% macro render_nav(items, level=0) -%}
+  <ul class="{{ 'ta-tree' if level == 0 else 'ta-tree-children' }}">
+  {%- for item in items %}
+    {%- if not (item.is_homepage and level == 0) %}
+    <li class="ta-tree-item">
+      {%- if item.children %}
+        <div class="ta-tree-folder{% if item.active %} is-active{% endif %}">{{ item.title }}</div>
+        {{ render_nav(item.children, level + 1) }}
+      {%- else %}
+        <a href="{{ item.url|url }}" class="ta-tree-link{% if item.active %} is-active{% endif %}" {% if item.active %}aria-current="page"{% endif %}>
+          {{ item.title }}
+        </a>
+      {%- endif %}
+    </li>
+    {%- endif %}
+  {%- endfor %}
+  </ul>
+{%- endmacro %}
+
+{% macro render_toc(items, level=0) -%}
+  {% if items %}
+    <ul class="{{ 'ta-toc-list' if level == 0 else 'ta-toc-children' }}">
+    {%- for item in items %}
+      <li>
+        <a href="{{ item.url }}" class="ta-toc-link ta-toc-level-{{ item.level }}">{{ item.title }}</a>
+        {{ render_toc(item.children, level + 1) }}
+      </li>
+    {%- endfor %}
+    </ul>
+  {% endif %}
+{%- endmacro %}
+
+{% block site_name %}
+<a class="navbar-brand ta-brand" href="{{ nav.homepage.url|url }}">
+  <span class="ta-brand-title">{{ config.site_name }}</span>
+</a>
+{% endblock %}
+
+{% block site_nav %}{% endblock %}
+
+{% block next_prev %}{% endblock %}
+
+{% block repo %}
+  {% if config.repo_url %}
+  <li class="nav-item">
+    <a href="{{ config.repo_url }}" class="nav-link">
+      <i class="fa-brands fa-github"></i> {{ config.repo_name or 'Repository' }}
+    </a>
+  </li>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="ta-layout{% if not page.is_homepage and page.toc %} has-toc{% endif %}">
+  <aside class="ta-sidebar-panel">
+    <div class="ta-panel ta-sidebar">
+      <h2 class="ta-panel-title">Directories</h2>
+      {{ render_nav(nav.items) }}
+    </div>
+  </aside>
+
+  <main class="ta-main-panel">
+    <article class="ta-panel ta-article">
+      {% if page.is_homepage %}
+        <div class="ta-home-content">{{ page.content }}</div>
+        <section class="ta-archive">
+          <div class="ta-archive-toolbar">
+            <span>Newest first</span>
+            <span>All posts across directories</span>
+          </div>
+          <div class="ta-archive-list">
+            {% for post in config.extra.archive_posts %}
+            <article class="ta-archive-item">
+              <div class="ta-archive-meta">
+                <span>{{ post.date_label }}</span>
+                {% if post.section %}<span>{{ post.section }}</span>{% endif %}
+              </div>
+              <h2 class="ta-archive-title">
+                <a href="{{ post.url|url }}">{{ post.title }}</a>
+              </h2>
+              {% if post.excerpt %}
+              <p class="ta-archive-excerpt">{{ post.excerpt }}</p>
+              {% endif %}
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% else %}
+        <header class="ta-article-head">
+          {% if page.ancestors %}
+          <div class="ta-article-path">
+            <a href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
+            {% for ancestor in page.ancestors|reverse %}
+              <span>→</span>
+              {% if ancestor.url %}
+              <a href="{{ ancestor.url|url }}">{{ ancestor.title }}</a>
+              {% else %}
+              <span>{{ ancestor.title }}</span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h1 class="ta-article-title">{{ page.title }}</h1>
+          <div class="ta-article-meta">
+            {% if page.meta.resolved_date %}<span>{{ page.meta.resolved_date }}</span>{% endif %}
+            {% if page.meta.resolved_section %}<span>{{ page.meta.resolved_section }}</span>{% endif %}
+          </div>
+        </header>
+        <div class="ta-article-content">
+          {{ page.content }}
+        </div>
+      {% endif %}
+    </article>
+  </main>
+
+  {% if not page.is_homepage and page.toc %}
+  <aside class="ta-toc-panel">
+    <div class="ta-panel ta-toc">
+      <h2 class="ta-panel-title">On This Page</h2>
+      {{ render_toc(page.toc) }}
+    </div>
+  </aside>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="ta-footer">
+  <p>{{ config.site_name }}</p>
+  <p>Built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</div>
+{% endblock %}

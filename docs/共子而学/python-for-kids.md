@@ -20,11 +20,11 @@
 
 记得 2023 年 4 月，看到红杉资本发布的一份关于 AI 未来能力趋势的预测报告，提到 2025 和 2030 年两个时间节点，AI 会在不同程度上替代人类程序员。当时我发了下面这条朋友圈。
 
-![](../assets/images/2023-4.jpg)
+![](assets/images/2023-4.jpg)
 
 去年 2025 年 11 月，Anthropic 发布 Claude 4.5，AI Agent 的能力突飞猛进，业内开始出现 "2026 年将是软件工程终结" 的论调。我又发了条朋友圈。
 
-![](../assets/images/2025-11.jpg)
+![](assets/images/2025-11.jpg)
 
 既然我相信编程作为一项专业技能注定被 AI 自动化，那现在是否还有必要投入时间教孩子学编程？
 
@@ -64,7 +64,7 @@
 
 为了不让这些心思白费，我让 AI 帮忙做了结构化的整理，放在了 [https://magicbowen.github.io/python-for-kids/](https://magicbowen.github.io/python-for-kids/)。这套教程的目标人群是三年级以上的小学生，同时也是给家长用来学习和备课的。我建议家长朋友亲自给孩子教，或者和孩子一起学习，享受从无到有创造东西的乐趣，留下一些别样的亲子回忆。
 
-![](../assets/images/python-for-kids-banner.jpg)
+![](assets/images/python-for-kids-banner.png)
 
 有需要的家长可以看看是否能借鉴一二。如果你本身也是位程序员家长，想添加一些自己的经验，欢迎共建：[https://github.com/MagicBowen/python-for-kids](https://github.com/MagicBowen/python-for-kids)。
 
@@ -78,4 +78,4 @@
 
 有了这本书，这次就不用再特意备课准备教程了，省事儿不少。感兴趣的朋友可以收藏，留以备用。
 
-![](../assets/images/math-programming.jpg)
+![](assets/images/math-programming.jpg)

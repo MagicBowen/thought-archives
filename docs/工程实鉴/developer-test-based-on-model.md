@@ -30,7 +30,7 @@
 
 有一些团队直接借助单元级测试用例的框架和技术作为组件级开发者测试的基座，这容易导致用例开发人员分别对底层硬件和外部依赖进行大量的重复打桩或 Mock，导致组件测试用例和被测代码的实现耦合，导致测试用例比较脆弱（如下图示例）。因此组件级的开发者测试往往需要借助一些业务定制化框架，测试用例的设计和实现也需要和单元测试不同。
 
-<div align="center"><img src="images/unittest.png" width="60%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/unittest.png" width="60%"></div>
 </br>
 
 还有一种做法是借助 Qemu 做仿真测试环境，模拟软件依赖的底层硬件和系统能力，这样就可以在 PC 上运行仿真系统执行测试用例。但是这种方法需要对 Qemu 进行定制，仿真的成本比较高，需要专门的仿真开发团队进行维护演进，在面对众多的开发者测试定制需求时容易响应不及时，同时基于仿真环境的测试用例的执行效率也不高。基于仿真的测试往往适合用于做系统级测试，但是对于组件阶段的开发者测试来说，我们期望有其它更轻量级的可以由每个组件团队自行实施和演进的方法。
@@ -57,15 +57,15 @@
 
 下图简单示例一个设备模型的DSL描述（使用C++语言实现），该示例中以类似设备树的结构描述了被测组件所依赖的底层硬件配置和拓扑结构，框架会在测试用例执行前用其初始化被测组件。
 
-<div align="center"><img src="images/device.png" width="50%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/device.png" width="50%"></div>
 
 下图示例了一个使用交互模型表达的测试用例，其中描述了被测组件和其依赖组件之间的业务交互过程，包括交互的时序、消息的内容以及断言。
 
-<div align="center"><img src="images/comm.png" width="50%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/comm.png" width="50%"></div>
 
 上面的交互过程等价于如下的业务场景时序图设计：
 
-<div align="center"><img src="images/seq-diagram.png" width="50%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/seq-diagram.png" width="50%"></div>
 
 后文我们分别讲解环境模型和交互模型的主要设计和使用方法。
 
@@ -81,7 +81,7 @@
 
 这样当被测代码执行中调用桩接口（或者访问自己的全局变量），实际访问的数据或者逻辑信息来自于环境模型的配置（框架会保证在测试用例依赖的环境模型变化的时候，自动重新初始化被测组件并更新桩函数的内部数据）。
 
-<div align="center"><img src="images/device-dsl.png" width="90%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/device-dsl.png" width="90%"></div>
 
 简而言之，就是使用环境模型的DSL描述被测组件所依赖的外部设备拓扑关系，将环境信息变成设备节点、属性或者拓扑关系，将其作为一组测试用例的前置条件。测试框架中会通过被测组件的初始化接口将环境模型的描述的信息应用到被测组件中，刷新被测组件的全局变量，并同时使用环境模型的框架接口获取环境信息来实现被测代码所依赖的桩函数。
 
@@ -114,17 +114,17 @@ DEF_GRAPH(graph_squeezev3) {
 
 例如对于如下业务场景用例时序图，我们选择其中一个组件作为被测组件（Component），与其交互的外部组件我们统称为测试Actor。这些Actor需要按照时序图中规定的顺序和消息来扮演外部组件，并与被测组件进行互动以激励业务场景用例的完整执行。
 
-<div align="center"><img src="images/seq-diagram.png" width="50%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/seq-diagram.png" width="50%"></div>
 
 在上述的测试过程中，涉及到如下几个要素：1）定义被测组件的外部协作组件（Actor）；2）描述Actor和被测组件的交互时序过程；3）对于Actor发送的消息，需要构造发送消息的内容；4）对于Actor接收的消息，需要断言收到的消息内容；
 
 交互模型首先要能够定义所有与被测组件协作的外部Actor，这些Actor要具备收发消息（或者是触发同步接口调用）的能力。
 
-<div align="center"><img src="images/actor.png" width="50%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/actor.png" width="50%"></div>
 
 接下来要能够在每个用例中使用这些Actor按照顺序图中的时序要求进行交互，包括填充消息、发送消息、接收消息、断言消息内容等。
 
-<div align="center"><img src="images/comm.png" width="50%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/comm.png" width="50%"></div>
 
 这样利用交互模型，我们就可以根据每个业务场景的顺序图设计，为被测组件设计对应的测试用例。在测试用例中，我们定义业务场景中和被测组件协作的外部Actor，然后通过Actor收发消息来激励被测组件完成整个业务用例的执行。框架会自动判断被测组件是否按照预期的交互时序和消息内容完成执行用例。
 
@@ -149,11 +149,11 @@ DEF_GRAPH(graph_squeezev3) {
 
 需求实例化是一种软件设计方法，要求组件设计过程中，对组件的业务场景进行分析，以测试 example 的形式输出业务场景用例。而结合我们前面介绍的测试方法，可以直接把需求实例化的输出结果用可执行的自动化测试用例表达出来，作为对组件的功能验收测试。
 
-<div align="center"><img src="images/usecase.png" width="90%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/usecase.png" width="90%"></div>
 
 如上图，传统的需求分析后，会对每一 usecase 用顺序图描述场景交互过程。而需求实例化则会把场景用如下的测试用例直接表达出来。
 
-<div align="center"><img src="images/testcase.png" width="60%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/testcase.png" width="60%"></div>
 
 这样就做到了将需求实例化的输出结果直接变成可执行的验收测试用例，将测试设计左移到了软件设计阶段。
 
@@ -171,7 +171,7 @@ DEF_GRAPH(graph_squeezev3) {
 
 上面介绍的方法是在与客户的技术合作项目中试点的，以下是一段原型代码，可以看到基于模型的测试用例代码比较简洁。右边的测试用例上半部分是在定义环境模型，其描述的内容和下图左上部分的硬件拓扑模型是一致的。右下部分是一个测试用例，其描述的内容和下图左下部分的业务时序图是一致的。
 
-<div align="center"><img src="images/netm.png" width="90%"></div>
+<div align="center"><img src="developer-test-based-on-model/images/netm.png" width="90%"></div>
 </br>
 
 在和客户合作的时候，环境模型和交互模型的DSL是专门为其定制的，团队反馈这两个模型及其DSL部分的代码还是有一定的门槛的。后来为了降低难度，我们把环境模型和交互模型中公共的代码抽象出来，形成了通用的DSL框架，这样其他组件的同学就可以直接复用该框架，将其与自己的开发者测试工程进行集成和适配，而不用关心DSL和模型框架底层的实现细节了。

@@ -1,3 +1,5 @@
 .dogent/*
 draft/*
 .DS_Store
+site/
+__pycache__/

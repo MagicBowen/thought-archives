@@ -1,410 +1,157 @@
-# MkDocs：现代文档站点的优雅解决方案
+# MkDocs：用最小框架托起一个 DIY 技术博客
 
-*本博客系统是用 MkDocs 搭建的，于是，吃水不忘挖井人，为它写篇博客，略表谢意!*
+*本博客系统底层是 MkDocs，主题是借助 Codex 基于我的需求 Generate 出来的。吃水不忘挖井人，为 MkDocs写篇博客，略表谢意!*
 
 ---
 
-## 背景介绍
+## 为什么是 MkDocs
 
-在技术写作的世界里，我们常常面临一个矛盾：**内容创作者只想专心写文档，却不得不花费大量时间折腾网站样式、导航菜单和搜索功能**。每每想起以前捣鼓各种自托管博客网站的配置，那种痛苦就浮现出来，感慨浪费的时间真的是不值——毕竟，写博客是为了分享知识，而不是为了成为前端专家。
+折腾过各种博客系统之后，我越来越确认一件事：对于以 Markdown 长文为主的技术博客来说，最重要的不是主题市场有多热闹，也不是组件有多花哨，而是**内容组织是否简单、构建是否稳定、部署是否省心**。
 
-这就是为什么当我发现 **MkDocs** 时，就被它的小而简单吸引了。
+MkDocs 的价值恰恰在这里。
 
-而 Material for MkDocs 则封装了 MkDocs 的框架，并配合一套朴素而完善的 Material Design 主题，将开发者从繁琐的前端工作中彻底解放出来。
+它不试图替你定义一整套“博客产品哲学”，也不会强迫你接受某种固定的信息结构。它只是提供了一个足够小、足够稳的骨架：
 
-### Material for MkDocs 的特点
+- 文档源文件放在 `docs/`
+- 配置集中在 `mkdocs.yml`
+- 一个命令本地预览
+- 一个命令静态构建
 
-MkDocs 提供了 **"开箱即用"的完整解决方案**：
+剩下的表达方式、目录结构、主题样式、部署方式，都可以按自己的需要来定义。
 
-- **零配置启动**：安装后，一个命令就能看到专业外观的文档站点
-- **内置强大功能**：搜索、多语言、代码注解、社交卡片等一应俱全
-- **响应式设计**：自动适配桌面、平板和手机
-- **Markdown 优先**：你只需要会写 Markdown，剩下的交给框架
+---
 
-### 设计哲学：Documentation that simply works
+## 为什么不继续用现成主题
 
-Material for MkDocs 有一个朴素但深刻的设计理念："文档就应该简单可用"。这个理念体现在框架的每一个细节中：
+这个博客最开始确实用过第三方主题，也尝试过别的 MkDocs 主题方案。但用久了就会发现现有主题的很多预设和自己并不 match。
 
-- **渐进式定制**：从默认配置开始，按需添加高级功能，不会一开始就被复杂的配置吓退
-- **内容为王**：所有设计决策都服务于更好地展示文档内容
-- **性能优化**：生成的站点体积小、加载快，对 SEO 友好
+在今天 AI Coding Agent 时代，软件应该是“柔性”的，能够适应用户的使用习惯和内容结构，而不是用户被迫适应软件的预设。对于技术博客来说，内容结构和表达习惯往往是非常个性化的，过于僵化的主题反而成了负担。
 
-如果你和我一样，厌倦了在文档工具上"重复造轮子"，那么接下来，让我们一起看看如何用 MkDocs 重新定义你的技术博客体验。
+于是就有了本博客现在这个 DIY 主题的诞生。它不是从零开始写的，而是基于 MkDocs 的 `theme.custom_dir` 机制，在内置 `mkdocs` 主题的基础上做覆盖和定制。这样既保留了 MkDocs 的稳定骨架，又把真正关心的页面结构和样式掌握在本地仓库里管理。
 
-## 安装
+---
 
-Material for MkDocs 提供了多种安装方式，适应不同的使用场景和技术栈。
+## 当前这个 DIY 主题关注什么
 
-### 通过 pip 安装（推荐）
+这个主题并不追求“功能最多”，而是只解决几个我真正关心的问题。
 
-对于 Python 开发者，使用 pip 安装是最直接的方式：
+### 1. 目录就是导航
+
+我不想手工维护一份越来越长的 `nav` 配置。
+
+所以当前主题的导航直接跟随 `docs/` 下的目录结构自动生成。也就是说：
+
+- 新增目录，导航自动出现
+- 新增文章，目录自动更新
+- 删除文件，导航自动消失
+- 调整目录层次，导航结构同步变化
+
+这让内容组织方式和站点导航保持一致，减少了维护负担。
+
+### 2. 首页按时间倒序列出文章
+
+首页不再承担“宣传页”职责，而更像一个博客索引页。
+
+当前做法是：
+
+- 首页保留极简说明
+- 下方直接按文章最后修改时间倒序列出所有博客
+- 时间显示使用博客文件本身的最后编辑时间
+
+这样做的好处是非常直接：站点更新了什么，一眼就能看到。
+
+### 3. 文章页聚焦阅读
+
+文章页尽量保持克制：
+
+- 左侧是目录树导航
+- 中间是正文
+- 右侧是当前文章目录
+
+这种布局没有太多花活，但对长篇技术文章很友好。尤其是写中文长文时，排版节奏、标题层级、代码块边界、图片宽度控制，比首页做得多炫更重要。
+
+### 4. Markdown 图片路径回归正常
+
+这个站点改造过程中还顺手修了一个以前比较烦人的问题：图片路径引用不够自然。
+
+现在的处理方式是：
+
+- 普通 Markdown 图片引用按当前 Markdown 文件相对路径来写
+- 某些 HTML `img src` 场景也通过本地 hook 做了路径修正
+
+这样写文档时不用再为生成后的目录结构额外“迁就”主题。
+
+---
+
+## 当前仓库里与主题相关的关键文件
+
+如果你也想用类似方式做一个 DIY MkDocs 主题，可以重点看这些文件：
+
+```text
+mkdocs.yml
+theme_overrides/main.html
+docs/assets/stylesheets/theme.css
+docs/assets/javascripts/theme-mode.js
+hooks/site_hooks.py
+.github/workflows/ci.yml
+```
+
+它们分别承担的职责大致如下：
+
+- `mkdocs.yml`：站点总配置
+- `theme_overrides/main.html`：主题模板覆盖
+- `docs/assets/stylesheets/theme.css`：站点样式
+- `docs/assets/javascripts/theme-mode.js`：主题切换相关脚本
+- `hooks/site_hooks.py`：构建期钩子逻辑，例如路径修正、首页归档数据整理
+- `.github/workflows/ci.yml`：GitHub Pages 发布流程
+
+这种结构的优点是清晰：**MkDocs 负责站点生成，主题代码和内容代码一起放在仓库里管理。**
+
+---
+
+## 本地开发体验
+
+这个博客现在的本地开发方式非常简单：
 
 ```bash
-# 创建虚拟环境（推荐）
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# 或 venv\Scripts\activate  # Windows
-
-# 安装 Material for MkDocs
-pip install mkdocs-material
-```
-
-我们通过安装 Material for MkDocs，自动安装了兼容版本的 MkDocs 和 Material 主题。
-
-### 通过 Docker 安装
-
-对于非 Python 环境或希望快速上手的用户，Docker 提供了预配置的容器：
-
-```bash
-# 拉取最新镜像
-docker pull squidfunk/mkdocs-material
-
-# 运行本地预览服务器
-docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
-```
-
-**Docker 镜像特点**：
-- 包含所有必要的依赖
-- 预装常用插件（如 minify、redirects）
-- 适合本地预览，不建议用于生产部署
-
-### 通过 Git 安装
-
-需要最新开发版本或特定分支时，可以直接从 GitHub 安装：
-
-```bash
-# 克隆仓库到项目子目录
-git clone https://github.com/squidfunk/mkdocs-material.git
-
-# 以开发模式安装
-pip install -e mkdocs-material
-```
-
-## 配置
-
-### 1. 初始化项目
-
-```bash
-# 创建项目目录
-mkdir my-docs && cd my-docs
-
-# 初始化 MkDocs 项目
-mkdocs new .
-
-# 编辑配置文件
-```
-
-### 2. 基本配置
-
-创建 `mkdocs.yml` 配置文件：
-
-```yaml
-site_name: 我的项目文档
-site_url: https://example.com/
-repo_url: https://github.com/username/repo
-
-theme:
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - search.suggest
-    - search.highlight
-
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-```
-
-### 3. 创建文档内容
-
-在 `docs` 目录下创建 Markdown 文件：
-
-```markdown
-# 欢迎页 (docs/index.md)
-
-# 欢迎使用我的项目文档
-
-这是一个使用 Material for MkDocs 创建的文档站点。
-
-### 功能特性
-
-- 响应式设计，支持移动设备
-- 内置全文搜索
-- 代码语法高亮
-- 多语言支持
-
-### 快速链接
-
-- [安装指南](installation.md)
-- [API 文档](api-reference.md)
-- [常见问题](faq.md)
-```
-
-### 4. 本地预览
-
-```bash
-# 启动本地开发服务器
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 mkdocs serve
-
-# 访问 http://localhost:8000 查看效果
 ```
 
-### 5. 构建静态站点
+`mkdocs serve` 启动后，可以直接本地预览最新主题和博客内容。
 
-```bash
-# 生成静态文件到 site/ 目录
-mkdocs build
-
-# 清理构建输出
-mkdocs build --clean
-```
-
-### 主题配置与高级定制
-
-Material for MkDocs 提供了丰富的主题定制选项：
-
-```yaml
-theme:
-  name: material
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: pink
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: blue
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-
-  font:
-    text: Roboto
-    code: Roboto Mono
-
-  logo: assets/logo.png
-  favicon: assets/favicon.ico
-```
-
-### 插件系统
-
-Material for MkDocs 兼容 MkDocs 的插件生态系统，并自带多个增强插件：
-
-```yaml
-plugins:
-  - search
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_style: google
-            show_source: true
-
-  # 第三方插件示例
-  - git-committers:
-      enabled: !ENV [CI, false]
-      repository: username/repo
-      branch: main
-```
-
-### 多语言支持
-
-创建国际化文档站点：
-
-```yaml
-# 多语言配置示例
-theme:
-  language: en
-
-extra:
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
-    - name: 简体中文
-      link: /zh/
-      lang: zh
-
-plugins:
-  - i18n:
-      default_language: en
-      languages:
-        en: English
-        zh: 中文
-```
-
-## 发布（GitHub Pages）
-
-### GitHub Pages
-
-Material for MkDocs 与 GitHub Pages 完美集成：
-
-1. **创建 GitHub Actions 工作流**：
-
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches:
-      - main
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
-```
-
-2. **配置仓库设置**：
-   - 在 GitHub 仓库设置中启用 GitHub Pages
-   - 选择 `gh-pages` 分支作为源
-
-
-## 高级用法
-
-### 1. 内置搜索
-
-传统文档站点的搜索功能往往依赖第三方服务（如 Algolia），需要配置爬虫和 API 密钥。Material for MkDocs 提供了完全内置的客户端搜索解决方案：
-
-```yaml
-# mkdocs.yml 中的搜索配置示例
-plugins:
-  - search:
-      lang: en
-      min_search_length: 3
-      prebuild_index: false
-```
-
-**主要优势**：
-- **零成本**：搜索完全在用户浏览器中运行，无需服务器端处理
-- **即时更新**：文档更新后搜索索引立即生效，无需等待爬虫
-- **高度可定制**：支持代码块内搜索、页面排除、结果加权等
-- **离线可用**：生成的站点支持离线搜索功能
-
-### 2. 代码注解
-
-技术文档经常需要解释代码示例。Material for MkDocs 提供了独特的代码注解功能，允许在代码块内添加丰富的解释内容：
-
-````markdown
-```python
-def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
-
-    # 注解1: 这是一个递归实现的斐波那契数列函数
-    # 注解2: 注意这里存在重复计算，实际使用时应考虑缓存优化
-```
-````
-
-代码注解支持：
-- **富文本格式**：支持 Markdown 和 HTML 格式
-- **多媒体内容**：可以包含图片、图表、代码块等
-- **响应式设计**：在移动设备上提供良好的触摸体验
-- **打印友好**：注解内容可以正确打印
-
-### 3. 社交卡片
-
-在社交媒体上分享文档链接时，一个有吸引力的预览图片可以显著提高点击率。Material for MkDocs 的内置社交插件可以自动为每个页面生成美观的预览图像：
-
-```yaml
-# 启用社交插件
-plugins:
-  - social:
-      cards:
-        enabled: true
-        design:
-          font: Roboto
-```
-
-**自动生成的内容**：
-- 使用项目名称和徽标
-- 页面标题和描述
-- 基于主题颜色的视觉设计
-- 可定制的字体和布局
-
-### 4. 图标系统
-
-Material for MkDocs 内置了超过 10,000 个图标和表情符号，可以通过简单的短代码语法在文档中使用：
-
-```markdown
-# 使用图标示例
-
-:material-check: 任务完成
-:material-alert: 注意警告
-:material-github: [GitHub 仓库](https://github.com)
-
-# 带颜色的图标
-:material-heart:{ .heart }
-```
-
-**图标功能**：
-- **丰富资源**：基于 Material Design Icons 和 FontAwesome
-- **简单语法**：易于记忆的短代码格式
-- **样式定制**：支持颜色、大小、动画效果
-- **自定义扩展**：可以添加自己的图标集
-
-### 5. 内容组织
-
-Material for MkDocs 提供了多种内容组织方式，帮助创建结构清晰的文档：
-
-```markdown
-# 内容标签示例
-
-=== "Python"
-    ```python
-    print("Hello, World!")
-    ```
-
-=== "JavaScript"
-    ```javascript
-    console.log("Hello, World!");
-    ```
-
-# 警告框示例
-
-!!! note "注意事项"
-    这是一个提示信息框，可用于强调重要内容。
-
-!!! warning "警告"
-    这是一个警告信息框，用于提醒潜在问题。
-
-!!! danger "危险"
-    这是一个危险信息框，用于标识关键风险。
-```
-
-## 对比其它方案
-
-| 特性 | Material for MkDocs | Docusaurus | GitBook | Read the Docs |
-|------|-------------------|------------|---------|---------------|
-| 学习曲线 | 低 | 中 | 低 | 中 |
-| 定制能力 | 高 | 高 | 低 | 中 |
-| 搜索功能 | 内置客户端 | 需插件 | 商业版 | 内置 |
-| 部署复杂度 | 低 | 中 | 高 | 低 |
-| 开源协议 | MIT | MIT | 商业 | MIT |
-
-### 总结与建议
-
-Material for MkDocs 代表了现代文档工具的发展方向：简单易用但功能强大，开箱即用但高度可定制。它将开发者从繁琐的前端工作中解放出来，让创建和维护高质量文档变得前所未有的简单。
-
-**下一步建议**：
-1. 访问 [Material for MkDocs 官方文档](https://squidfunk.github.io/mkdocs-material/) 了解更多高级功能
-2. 查看 [GitHub 仓库](https://github.com/squidfunk/mkdocs-material) 的示例和 issue 讨论
-3. 加入 [Insiders 项目](https://squidfunk.github.io/mkdocs-material/insiders/) 获取最新功能和直接支持开发
-4. 官方 [MkDocs 官方文档](https://www.mkdocs.org/)
+当前配置里还额外 watch 了主题模板、样式、脚本和 hook 目录，所以修改这些文件时，本地预览会尽快反映变化。这一点对主题开发很重要，因为样式调整通常需要频繁试错。
 
 ---
 
-**标签：** mkdocs, 文档工具, 静态站点生成器, 技术文档, 开源工具
+## 部署方式也做了更新
+
+以前很多 MkDocs 教程都会推荐 `mkdocs gh-deploy`。这个命令并不是不能用，但对现在这个仓库来说，我更倾向于使用 GitHub Pages 官方的 artifact workflow。
+
+当前仓库的做法是：
+
+- GitHub Actions 中构建静态站点
+- 上传 `site/` 作为 Pages artifact
+- 由官方 Pages action 进行部署
+
+这比直接往 `gh-pages` 分支推生成结果更清晰，也更符合 GitHub 现在推荐的发布路径。
+
+---
+
+## 软件进入按需产生，柔性适应的时代
+
+这个博客的改造过程，是一个很小但很典型的例子。
+
+MkDocs 提供的是那个**稳定的内核**：目录约定、构建流程、搜索能力、部署链路，这些基础能力不需要每次都重造。它像一个扎实的 runtime，把内容站点最底层、最不该反复折腾的部分稳稳托住。
+
+而主题、导航方式、首页呈现、时间排序、深浅色模式、图片路径修正这些，则构成了那个**柔性的外延**。过去这类定制往往意味着大量手写前端代码，或者在第三方主题上艰难打补丁；而现在，借助 Codex 这类 AI Coding Agent，通过 Vibe Coding 的方式，就可以围绕自己的真实习惯快速生成、迭代和修正，让软件逐步长成自己想要的样子。
+
+这背后反映的是一个更大的趋势：**AI 生成时代的软件，正在从“人适应软件”，走向“软件适应人”。** 软件不再必须以统一模板和固定交互去要求所有用户，而是更可能演化成“一个稳定内核 + 一层柔性外延”的形态。内核保证可靠、可维护、可复用；外延则根据用户的内容、偏好、工作流和审美快速变化。
+
+于是，未来越来越多软件都会呈现出一种“千人千面”的趋势。不是每个人都去从零开发一套系统，而是在同一个稳定底盘之上，借助 AI 以极低成本生成适合自己的那一层界面、流程和表达方式。对我来说，MkDocs 正好是这样一个很合适的底盘：它足够稳，而 AI 让它终于足够贴近人。
+
+---
+
+**标签：** mkdocs, DIY theme, vibe coding, codex, 技术博客

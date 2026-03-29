@@ -29,7 +29,7 @@
 
 对于易用性评估，这里有个关键的假设在于：**可以将复杂度量化为 Agent 完成任务所消耗的 Token 数**。
 
-![](../assets/images/complexity-to-token.png)
+![](assets/images/complexity-to-token.png)
 
 即文档、示例代码、环境配置、构建和测试工程的复杂度，会反映在算子开发 Agent 需要参考的知识量，使用的工具数量，以及失败后的反复重试次数上，最终反映在具体的 Token 消耗上，这些都是 "复杂度" 的量化表现。
 
@@ -51,7 +51,7 @@
 
 有了这套自动化评估框架，易用性评估就从一个 "依赖人" 的定性任务，变成了一个 "可自动化、可量化、可持续" 的工程化能力。
 
-![](../assets/images/double-agents.png)
+![](assets/images/double-agents.png)
 
 这类似针对易用性这个软件属性搭建了一个定制的测试框架，易用性工程师可以持续设计各种不同的测试用例（不同类型的开发任务），让这套系统进行测试并给出测试反馈结果。
 
@@ -195,7 +195,7 @@ MLOps 的成熟让我们习惯了这样的工作流：训练模型、部署模�
 
 这三个能力如果闭环打通，就几乎实现了在线强化学习：
 
-![](../assets/images/online-RL.png)
+![](assets/images/online-RL.png)
 
 1. 工作 Agent 完成任务并记录过程日志
 2. 评估改进 Agent 通过 insights 命令分析日志，识别改进点
