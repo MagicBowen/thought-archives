@@ -2,4 +2,6 @@
 draft/*
 .DS_Store
 site/
+specs/
+refs/
 __pycache__/
