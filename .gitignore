@@ -10,3 +10,8 @@ recycle-bin/
 .video_agent/
 .zcodeignore
 __pycache__/
+
+# wechat-publish skill 构建产物
+.zcode/skills/wechat-publish/node_modules/
+.zcode/skills/wechat-publish/.npm-cache/
+out/wechat/
