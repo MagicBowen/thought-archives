@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="608" viewBox="0 0 1200 608" role="img" aria-labelledby="title desc">
+<title id="title">双重定位</title><desc id="desc">config/server.toml 第 10 行第 8 列的 0，对应逻辑路径 listeners[1].port。应用约束为 1 到 65535。</desc>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2457C5"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#268362"/></marker>
+<marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#C94B48"/></marker>
+<marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#60728A"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#BB641F"/></marker>
+</defs>
+<g font-family="&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,&#x27;Noto Sans CJK SC&#x27;,Arial,sans-serif">
+<rect x="1" y="1" width="1198" height="606" rx="20" fill="#FFFFFF" stroke="#CEDBEC" stroke-width="1.5"/>
+<text x="38" y="39" font-size="15" fill="#2457C5" font-weight="600" text-anchor="start">
+<tspan x="38" dy="0">SOURCE × SEMANTICS</tspan>
+</text>
+<text x="38" y="80" font-size="29" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="38" dy="0">双重定位</tspan>
+</text>
+<path d="M38 102 L1162 102" stroke="#CEDBEC" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="46" y="145" font-size="16" fill="#2457C5" font-weight="650" text-anchor="start">
+<tspan x="46" dy="0">PHYSICAL LOCATION</tspan>
+</text>
+<text x="46" y="177" font-size="23" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="46" dy="0">源码视图 · 去哪里修改</tspan>
+</text>
+<rect x="44" y="197" width="555" height="277" rx="13" fill="#142136" stroke="none" stroke-width="1.5"/>
+<rect x="44" y="197" width="555" height="42" rx="13" fill="#22324B" stroke="none" stroke-width="1.5"/>
+<text x="65" y="225" font-size="18" fill="#CDDAEE" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="65" dy="0">config/server.toml</tspan>
+</text>
+<text x="82" y="278" font-size="20" fill="#8194AE" font-weight="400" text-anchor="end" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="82" dy="0">7</tspan>
+</text>
+<text x="110" y="278" font-size="21" fill="#E3EAF5" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="110" dy="0">[[listeners]]</tspan>
+</text>
+<text x="82" y="321" font-size="20" fill="#8194AE" font-weight="400" text-anchor="end" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="82" dy="0">8</tspan>
+</text>
+<text x="110" y="321" font-size="21" fill="#E3EAF5" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="110" dy="0">name = &quot;admin&quot;</tspan>
+</text>
+<text x="82" y="364" font-size="20" fill="#8194AE" font-weight="400" text-anchor="end" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="82" dy="0">9</tspan>
+</text>
+<text x="110" y="364" font-size="21" fill="#E3EAF5" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="110" dy="0">host = &quot;127.0.0.1&quot;</tspan>
+</text>
+<rect x="55" y="380" width="532" height="40" rx="4" fill="#442B36" stroke="none" stroke-width="1.5"/>
+<text x="82" y="407" font-size="20" fill="#8194AE" font-weight="400" text-anchor="end" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="82" dy="0">10</tspan>
+</text>
+<text x="110" y="407" font-size="21" fill="#E3EAF5" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="110" dy="0">port = 0</tspan>
+</text>
+<rect x="195" y="382" width="16" height="30" rx="3" fill="none" stroke="#FA8B81" stroke-width="1.5"/>
+<text x="111" y="451" font-size="18" fill="#F5B784" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="111" dy="0">line 10 · column 8</tspan>
+</text>
+<text x="694" y="145" font-size="16" fill="#268362" font-weight="650" text-anchor="start">
+<tspan x="694" dy="0">LOGICAL LOCATION</tspan>
+</text>
+<text x="694" y="177" font-size="23" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="694" dy="0">对象视图 · 哪个字段出错</tspan>
+</text>
+<text x="710" y="226" font-size="24" fill="#162B48" font-weight="650" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="710" dy="0">listeners</tspan>
+</text>
+<path d="M719 241 V394 M719 279 H760 M719 333 H760 M773 345 V392 H818" stroke="#CEDBEC" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="770" y="285" font-size="21" fill="#60728A" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="770" dy="0">[0]  public</tspan>
+</text>
+<text x="770" y="339" font-size="21" fill="#162B48" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="770" dy="0">[1]  admin</tspan>
+</text>
+<rect x="820" y="366" width="322" height="53" rx="8" fill="#FFF0EE" stroke="#E4B2AE" stroke-width="1.5"/>
+<text x="840" y="400" font-size="23" fill="#C94B48" font-weight="650" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="840" dy="0">port: 0</tspan>
+</text>
+<text x="704" y="453" font-size="22" fill="#268362" font-weight="600" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="704" dy="0">listeners[1].port</tspan>
+</text>
+<path d="M599 396 C670 396 706 392 809 392" stroke="#BB641F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)" stroke-dasharray="6 6"/>
+<rect x="44" y="509" width="1100" height="64" rx="10" fill="#EEF4FF" stroke="none" stroke-width="1.5"/>
+<text x="67" y="550" font-size="21" fill="#2457C5" font-weight="650" text-anchor="start">
+<tspan x="67" dy="0">同一失败对象</tspan>
+</text>
+<text x="273" y="550" font-size="21" fill="#162B48" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="273" dy="0">actual = 0</tspan>
+</text>
+<text x="580" y="550" font-size="21" fill="#162B48" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="580" dy="0">constraint = [1, 65535]</tspan>
+</text>
+</g></svg>

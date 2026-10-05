@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="666" viewBox="0 0 1200 666" role="img" aria-labelledby="title desc">
+<title id="title">错误与行动</title><desc id="desc">Observe、Reason、Edit / Act、Execute 形成循环。模糊错误需要重新调查；结构化诊断提供位置、约束和恢复依据。</desc>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2457C5"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#268362"/></marker>
+<marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#C94B48"/></marker>
+<marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#60728A"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#BB641F"/></marker>
+</defs>
+<g font-family="&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,&#x27;Noto Sans CJK SC&#x27;,Arial,sans-serif">
+<rect x="1" y="1" width="1198" height="664" rx="20" fill="#FFFFFF" stroke="#CEDBEC" stroke-width="1.5"/>
+<text x="38" y="39" font-size="15" fill="#2457C5" font-weight="600" text-anchor="start">
+<tspan x="38" dy="0">CONTROL LOOP</tspan>
+</text>
+<text x="38" y="80" font-size="29" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="38" dy="0">错误与行动</tspan>
+</text>
+<path d="M38 102 L1162 102" stroke="#CEDBEC" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="334" cy="356" r="158" fill="none" stroke="#CEDBEC" stroke-width="20"/>
+<path d="M388.04 207.53 A158 158 0 0 1 482.47 301.96" stroke="#2457C5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M482.47 410.04 A158 158 0 0 1 388.04 504.47" stroke="#2457C5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M279.96 504.47 A158 158 0 0 1 185.53 410.04" stroke="#2457C5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M185.53 301.96 A158 158 0 0 1 279.96 207.53" stroke="#2457C5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<circle cx="334" cy="198" r="42" fill="#FFFFFF" stroke="#2457C5" stroke-width="2"/>
+<text x="334" y="208" font-size="29" fill="#2457C5" font-weight="650" text-anchor="middle">
+<tspan x="334" dy="0">1</tspan>
+</text>
+<text x="334" y="267" font-size="23" fill="#162B48" font-weight="650" text-anchor="middle">
+<tspan x="334" dy="0">Observe</tspan>
+</text>
+<text x="334" y="293" font-size="17" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="334" dy="0">接收执行结果</tspan>
+</text>
+<circle cx="492" cy="356" r="42" fill="#FFFFFF" stroke="#2457C5" stroke-width="2"/>
+<text x="492" y="366" font-size="29" fill="#2457C5" font-weight="650" text-anchor="middle">
+<tspan x="492" dy="0">2</tspan>
+</text>
+<text x="550" y="351" font-size="22" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="550" dy="0">Reason</tspan>
+</text>
+<text x="550" y="380" font-size="16" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="550" dy="0">推测失败原因</tspan>
+</text>
+<circle cx="334" cy="514" r="42" fill="#FFFFFF" stroke="#2457C5" stroke-width="2"/>
+<text x="334" y="524" font-size="29" fill="#2457C5" font-weight="650" text-anchor="middle">
+<tspan x="334" dy="0">3</tspan>
+</text>
+<text x="334" y="583" font-size="23" fill="#162B48" font-weight="650" text-anchor="middle">
+<tspan x="334" dy="0">Edit / Act</tspan>
+</text>
+<text x="334" y="609" font-size="17" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="334" dy="0">选择并执行修改</tspan>
+</text>
+<circle cx="176" cy="356" r="42" fill="#FFFFFF" stroke="#2457C5" stroke-width="2"/>
+<text x="176" y="366" font-size="29" fill="#2457C5" font-weight="650" text-anchor="middle">
+<tspan x="176" dy="0">4</tspan>
+</text>
+<text x="126" y="351" font-size="22" fill="#162B48" font-weight="650" text-anchor="end">
+<tspan x="126" dy="0">Execute</tspan>
+</text>
+<text x="126" y="380" font-size="16" fill="#60728A" font-weight="400" text-anchor="end">
+<tspan x="126" dy="0">重新运行工具</tspan>
+</text>
+<text x="334" y="343" font-size="30" fill="#162B48" font-weight="650" text-anchor="middle">
+<tspan x="334" dy="0">Agent</tspan>
+</text>
+<text x="334" y="376" font-size="21" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="334" dy="0">Control Loop</tspan>
+</text>
+<path d="M684 147 L684 611" stroke="#CEDBEC" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="704" y="165" font-size="23" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="704" dy="0">同一次失败，两种信息质量</tspan>
+</text>
+<rect x="703" y="193" width="442" height="147" rx="14" fill="#FFF0EE" stroke="none" stroke-width="1.5"/>
+<text x="726" y="228" font-size="21" fill="#C94B48" font-weight="650" text-anchor="start">
+<tspan x="726" dy="0">模糊报错</tspan>
+</text>
+<text x="726" y="265" font-size="20" fill="#162B48" font-weight="400" text-anchor="start" font-family="&#x27;SFMono-Regular&#x27;,Consolas,&#x27;Liberation Mono&#x27;,monospace">
+<tspan x="726" dy="0">invalid configuration</tspan>
+</text>
+<text x="726" y="303" font-size="19" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="726" dy="0">读取 → 搜索 → 推断 → 再尝试</tspan>
+</text>
+<rect x="703" y="362" width="442" height="176" rx="14" fill="#EDF8F2" stroke="none" stroke-width="1.5"/>
+<text x="726" y="398" font-size="21" fill="#268362" font-weight="650" text-anchor="start">
+<tspan x="726" dy="0">可操作诊断</tspan>
+</text>
+<text x="726" y="436" font-size="21" fill="#162B48" font-weight="400" text-anchor="start">
+<tspan x="726" dy="0">错误对象  /  实际值  /  约束</tspan>
+</text>
+<text x="726" y="473" font-size="21" fill="#162B48" font-weight="400" text-anchor="start">
+<tspan x="726" dy="0">位置与来源  /  修复与验证依据</tspan>
+</text>
+<text x="726" y="512" font-size="18" fill="#268362" font-weight="400" text-anchor="start">
+<tspan x="726" dy="0">让下一次行动建立在已知事实之上</tspan>
+</text>
+<text x="704" y="585" font-size="19" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="704" dy="0">工具的输出，也是下一轮推理的输入。</tspan>
+</text>
+</g></svg>

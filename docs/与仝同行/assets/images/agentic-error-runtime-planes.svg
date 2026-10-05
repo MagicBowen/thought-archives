@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="736" viewBox="0 0 1200 736" role="img" aria-labelledby="title desc">
+<title id="title">诊断运行时</title><desc id="desc">生产者层产生原生错误和来源。诊断层组织 Provenance、Diagnosis、Recovery。统一 Diagnostic IR 交付给 CLI、IDE、CI、Agent。本文建议架构。</desc>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2457C5"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#268362"/></marker>
+<marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#C94B48"/></marker>
+<marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#60728A"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#BB641F"/></marker>
+</defs>
+<g font-family="&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,&#x27;Noto Sans CJK SC&#x27;,Arial,sans-serif">
+<rect x="1" y="1" width="1198" height="734" rx="20" fill="#FFFFFF" stroke="#CEDBEC" stroke-width="1.5"/>
+<text x="38" y="39" font-size="15" fill="#2457C5" font-weight="600" text-anchor="start">
+<tspan x="38" dy="0">REFERENCE ARCHITECTURE</tspan>
+</text>
+<text x="38" y="80" font-size="29" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="38" dy="0">诊断运行时</tspan>
+</text>
+<path d="M38 102 L1162 102" stroke="#CEDBEC" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(92 0)">
+<rect x="43" y="130" width="930" height="570" rx="15" fill="#F8FAFD" stroke="#CEDBEC" stroke-width="1.5"/>
+<text x="64" y="165" font-size="18" fill="#60728A" font-weight="600" text-anchor="start">
+<tspan x="64" dy="0">01  事实生产者</tspan>
+</text>
+<text x="82" y="212" font-size="23" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="82" dy="0">Compiler</tspan>
+</text>
+<text x="295" y="212" font-size="23" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="295" dy="0">Parser / API</tspan>
+</text>
+<text x="518" y="212" font-size="23" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="518" dy="0">Validator</tspan>
+</text>
+<text x="754" y="212" font-size="23" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="754" dy="0">Test runner</tspan>
+</text>
+<path d="M78 244 L937 244" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M155 228 L155 244" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M369 228 L369 244" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600 228 L600 244" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M826 228 L826 244" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M510 244 L510 277" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="65" y="286" width="884" height="212" rx="12" fill="#EEF4FF" stroke="none" stroke-width="1.5"/>
+<text x="85" y="320" font-size="18" fill="#2457C5" font-weight="650" text-anchor="start">
+<tspan x="85" dy="0">02  DIAGNOSTIC RUNTIME</tspan>
+</text>
+<text x="85" y="368" font-size="25" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="85" dy="0">Provenance</tspan>
+</text>
+<text x="85" y="404" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="85" dy="0">来源 / 路径 / 调用关联</tspan>
+</text>
+<text x="378" y="368" font-size="25" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="378" dy="0">Diagnosis</tspan>
+</text>
+<text x="378" y="404" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="378" dy="0">错误码 / 约束 / 因果</tspan>
+</text>
+<text x="671" y="368" font-size="25" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="671" dy="0">Recovery</tspan>
+</text>
+<text x="671" y="404" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="671" dy="0">修复依据 / 适用性 / 验证</tspan>
+</text>
+<path d="M353 347 L353 466" stroke="#B7C9E5" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M646 347 L646 466" stroke="#B7C9E5" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="85" y="459" font-size="19" fill="#2457C5" font-weight="400" text-anchor="start">
+<tspan x="85" dy="0">公共能力以库、Layer 或 Middleware 复用</tspan>
+</text>
+<path d="M510 505 L510 531" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="65" y="539" width="884" height="58" rx="7" fill="#2457C5" stroke="none" stroke-width="1.5"/>
+<text x="507" y="576" font-size="23" fill="#FFFFFF" font-weight="600" text-anchor="middle">
+<tspan x="507" dy="0">Diagnostic IR  ·  一份可版本化的语义契约</tspan>
+</text>
+<path d="M157 598 L157 624" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M390 598 L390 624" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M621 598 L621 624" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M843 598 L843 624" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<text x="157" y="650" font-size="24" fill="#162B48" font-weight="650" text-anchor="middle">
+<tspan x="157" dy="0">CLI</tspan>
+</text>
+<text x="157" y="680" font-size="17" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="157" dy="0">终端上下文</tspan>
+</text>
+<text x="390" y="650" font-size="24" fill="#162B48" font-weight="650" text-anchor="middle">
+<tspan x="390" dy="0">IDE</tspan>
+</text>
+<text x="390" y="680" font-size="17" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="390" dy="0">定位 / Code Action</tspan>
+</text>
+<text x="621" y="650" font-size="24" fill="#162B48" font-weight="650" text-anchor="middle">
+<tspan x="621" dy="0">CI</tspan>
+</text>
+<text x="621" y="680" font-size="17" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="621" dy="0">归档 / 对比</tspan>
+</text>
+<text x="843" y="650" font-size="24" fill="#268362" font-weight="650" text-anchor="middle">
+<tspan x="843" dy="0">Agent</tspan>
+</text>
+<text x="843" y="680" font-size="17" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="843" dy="0">计划 / 恢复</tspan>
+</text>
+</g>
+</g></svg>

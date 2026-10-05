@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="559" viewBox="0 0 1200 559" role="img" aria-labelledby="title desc">
+<title id="title">恢复能力阶梯</title><desc id="desc">本文提出的五级设计模型。L1 文本，L2 上下文，L3 定位，L4 诊断语义，L5 恢复。L4 以有类型的字段表达实际值、约束、来源及诊断关联，层级不由输出格式决定。图高不表示测量分数。</desc>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2457C5"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#268362"/></marker>
+<marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#C94B48"/></marker>
+<marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#60728A"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#BB641F"/></marker>
+</defs>
+<g font-family="&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,&#x27;Noto Sans CJK SC&#x27;,Arial,sans-serif">
+<rect x="1" y="1" width="1198" height="557" rx="20" fill="#FFFFFF" stroke="#CEDBEC" stroke-width="1.5"/>
+<text x="38" y="39" font-size="15" fill="#2457C5" font-weight="600" text-anchor="start">
+<tspan x="38" dy="0">CAPABILITY MODEL</tspan>
+</text>
+<text x="38" y="80" font-size="29" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="38" dy="0">恢复能力阶梯</tspan>
+</text>
+<path d="M38 102 L1162 102" stroke="#CEDBEC" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="44" y="358" width="214" height="117" rx="0" fill="#EEF1F6" stroke="none" stroke-width="1.5"/>
+<text x="62" y="340" font-size="29" fill="#2457C5" font-weight="650" text-anchor="start">
+<tspan x="62" dy="0">L1</tspan>
+</text>
+<text x="62" y="391" font-size="21" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="62" dy="0">Textual</tspan>
+</text>
+<text x="62" y="428" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="62" dy="0">可读文本</tspan>
+<tspan x="62" dy="26.099999999999998">失败状态</tspan>
+</text>
+<rect x="268" y="310" width="214" height="165" rx="0" fill="#E3EBF8" stroke="none" stroke-width="1.5"/>
+<text x="286" y="292" font-size="29" fill="#2457C5" font-weight="650" text-anchor="start">
+<tspan x="286" dy="0">L2</tspan>
+</text>
+<text x="286" y="343" font-size="21" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="286" dy="0">Contextual</tspan>
+</text>
+<text x="286" y="380" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="286" dy="0">执行上下文</tspan>
+<tspan x="286" dy="26.099999999999998">调用栈 / 模块</tspan>
+</text>
+<rect x="492" y="262" width="214" height="213" rx="0" fill="#D4E2FA" stroke="none" stroke-width="1.5"/>
+<text x="510" y="244" font-size="29" fill="#2457C5" font-weight="650" text-anchor="start">
+<tspan x="510" dy="0">L3</tspan>
+</text>
+<text x="510" y="295" font-size="21" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="510" dy="0">Locatable</tspan>
+</text>
+<text x="510" y="332" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="510" dy="0">稳定错误码</tspan>
+<tspan x="510" dy="26.099999999999998">物理与逻辑位置</tspan>
+</text>
+<rect x="716" y="214" width="214" height="261" rx="0" fill="#BBD2F8" stroke="none" stroke-width="1.5"/>
+<text x="734" y="196" font-size="29" fill="#2457C5" font-weight="650" text-anchor="start">
+<tspan x="734" dy="0">L4</tspan>
+</text>
+<text x="734" y="247" font-size="21" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="734" dy="0">Semantic</tspan>
+</text>
+<text x="734" y="284" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="734" dy="0">实际值 / 约束</tspan>
+<tspan x="734" dy="26.099999999999998">来源 / 诊断关联</tspan>
+<tspan x="734" dy="26.099999999999998">程序可处理的语义</tspan>
+</text>
+<rect x="940" y="166" width="214" height="309" rx="0" fill="#DDF1E7" stroke="none" stroke-width="1.5"/>
+<text x="958" y="148" font-size="29" fill="#268362" font-weight="650" text-anchor="start">
+<tspan x="958" dy="0">L5</tspan>
+</text>
+<text x="958" y="199" font-size="21" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="958" dy="0">Recoverable</tspan>
+</text>
+<text x="958" y="236" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="958" dy="0">修复前置条件</tspan>
+<tspan x="958" dy="26.099999999999998">适用性 / 验证</tspan>
+</text>
+<path d="M44 480 L1154 480" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<text x="44" y="521" font-size="19" fill="#2457C5" font-weight="600" text-anchor="start">
+<tspan x="44" dy="0">逐步增加可恢复能力</tspan>
+</text>
+<text x="1155" y="521" font-size="17" fill="#60728A" font-weight="400" text-anchor="end">
+<tspan x="1155" dy="0">本文归纳模型 · 非认证标准 / 非量化评分</tspan>
+</text>
+</g></svg>

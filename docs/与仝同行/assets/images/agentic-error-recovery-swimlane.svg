@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="671" viewBox="0 0 1200 671" role="img" aria-labelledby="title desc">
+<title id="title">修复与验证</title><desc id="desc">诊断后 Agent 选择有依据的候选修复。运行时检查版本、旧值和权限，满足条件才应用。验证通过则记录结果，失败返回诊断；条件不满足需重新定位或升级处理。</desc>
+<defs>
+<marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2457C5"/></marker>
+<marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#268362"/></marker>
+<marker id="a-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#C94B48"/></marker>
+<marker id="a-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#60728A"/></marker>
+<marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#BB641F"/></marker>
+</defs>
+<g font-family="&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,&#x27;Noto Sans CJK SC&#x27;,Arial,sans-serif">
+<rect x="1" y="1" width="1198" height="669" rx="20" fill="#FFFFFF" stroke="#CEDBEC" stroke-width="1.5"/>
+<text x="38" y="39" font-size="15" fill="#2457C5" font-weight="600" text-anchor="start">
+<tspan x="38" dy="0">RECOVERY WORKFLOW</tspan>
+</text>
+<text x="38" y="80" font-size="29" fill="#162B48" font-weight="650" text-anchor="start">
+<tspan x="38" dy="0">修复与验证</tspan>
+</text>
+<path d="M38 102 L1162 102" stroke="#CEDBEC" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="43" y="132" width="330" height="480" rx="10" fill="#F6F8FC" stroke="none" stroke-width="1.5"/>
+<text x="63" y="167" font-size="21" fill="#60728A" font-weight="600" text-anchor="start">
+<tspan x="63" dy="0">Agent · 决策</tspan>
+</text>
+<rect x="382" y="132" width="405" height="480" rx="10" fill="#F6F8FC" stroke="none" stroke-width="1.5"/>
+<text x="402" y="167" font-size="21" fill="#60728A" font-weight="600" text-anchor="start">
+<tspan x="402" dy="0">Runtime · 应用</tspan>
+</text>
+<rect x="796" y="132" width="360" height="480" rx="10" fill="#F6F8FC" stroke="none" stroke-width="1.5"/>
+<text x="816" y="167" font-size="21" fill="#60728A" font-weight="600" text-anchor="start">
+<tspan x="816" dy="0">Verifier · 验收</tspan>
+</text>
+<circle cx="97" cy="244" r="13" fill="#2457C5" stroke="none" stroke-width="2"/>
+<text x="126" y="251" font-size="22" fill="#162B48" font-weight="600" text-anchor="start">
+<tspan x="126" dy="0">接收诊断</tspan>
+</text>
+<path d="M97 264 L97 298" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<rect x="70" y="308" width="269" height="83" rx="10" fill="#EEF4FF" stroke="#CEDBEC" stroke-width="1.5"/>
+<text x="204" y="341" font-size="23" fill="#2457C5" font-weight="650" text-anchor="middle">
+<tspan x="204" dy="0">选择候选修复</tspan>
+</text>
+<text x="204" y="373" font-size="18" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="204" dy="0">约束 + 项目意图</tspan>
+</text>
+<path d="M348 350 L475 350" stroke="#2457C5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-blue)"/>
+<path d="M578 282 L670 350 L578 418 L486 350 Z" stroke="#BB641F" stroke-width="2" fill="#FFF5E9" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="578" y="344" font-size="22" fill="#BB641F" font-weight="650" text-anchor="middle">
+<tspan x="578" dy="0">前置条件</tspan>
+</text>
+<text x="578" y="374" font-size="19" fill="#BB641F" font-weight="400" text-anchor="middle">
+<tspan x="578" dy="0">是否满足？</tspan>
+</text>
+<text x="723" y="247" font-size="16" fill="#60728A" font-weight="400" text-anchor="middle">
+<tspan x="723" dy="0">版本 / 旧值</tspan>
+<tspan x="723" dy="23.2">权限与范围</tspan>
+</text>
+<path d="M578 424 L578 478" stroke="#268362" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="592" y="456" font-size="17" fill="#268362" font-weight="400" text-anchor="start">
+<tspan x="592" dy="0">是</tspan>
+</text>
+<rect x="461" y="487" width="235" height="74" rx="9" fill="#EDF8F2" stroke="none" stroke-width="1.5"/>
+<text x="578" y="532" font-size="23" fill="#268362" font-weight="650" text-anchor="middle">
+<tspan x="578" dy="0">应用补丁</tspan>
+</text>
+<path d="M704 525 L821 525" stroke="#268362" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<rect x="830" y="487" width="301" height="74" rx="9" fill="#EDF8F2" stroke="none" stroke-width="1.5"/>
+<text x="981" y="532" font-size="23" fill="#268362" font-weight="650" text-anchor="middle">
+<tspan x="981" dy="0">执行验证</tspan>
+</text>
+<path d="M981 479 V357" stroke="#268362" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="996" y="419" font-size="18" fill="#268362" font-weight="400" text-anchor="start">
+<tspan x="996" dy="0">通过</tspan>
+</text>
+<circle cx="981" cy="321" r="26" fill="#EDF8F2" stroke="#268362" stroke-width="2"/>
+<text x="981" y="329" font-size="24" fill="#268362" font-weight="650" text-anchor="middle">
+<tspan x="981" dy="0">✓</tspan>
+</text>
+<text x="981" y="277" font-size="20" fill="#268362" font-weight="600" text-anchor="middle">
+<tspan x="981" dy="0">记录已验证的结果</tspan>
+</text>
+<path d="M578 281 V190 H97 V225" stroke="#BB641F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-orange)"/>
+<text x="592" y="248" font-size="17" fill="#BB641F" font-weight="400" text-anchor="start">
+<tspan x="592" dy="0">否</tspan>
+</text>
+<text x="337" y="214" font-size="16" fill="#BB641F" font-weight="400" text-anchor="middle">
+<tspan x="337" dy="0">重新定位 / 升级处理</tspan>
+</text>
+<path d="M981 568 V590 H55 V244 H77" stroke="#C94B48" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#a-red)" stroke-dasharray="6 6"/>
+<rect x="480" y="576" width="300" height="28" rx="0" fill="#F6F8FC" stroke="none" stroke-width="1.5"/>
+<text x="630" y="596" font-size="18" fill="#C94B48" font-weight="500" text-anchor="middle">
+<tspan x="630" dy="0">失败 · 新诊断进入下一轮</tspan>
+</text>
+<text x="43" y="648" font-size="18" fill="#60728A" font-weight="400" text-anchor="start">
+<tspan x="43" dy="0">配置校验通过 ≠ 启动或业务回归通过；成功记录必须说明实际验证范围。</tspan>
+</text>
+</g></svg>
