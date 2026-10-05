@@ -4,4 +4,9 @@ draft/*
 site/
 specs/
 refs/
+recycle-bin/
+.claude/
+.v2c/
+.video_agent/
+.zcodeignore
 __pycache__/
