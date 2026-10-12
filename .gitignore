@@ -9,6 +9,7 @@ recycle-bin/
 .v2c/
 .video_agent/
 .zcodeignore
+.zcode/
 __pycache__/
 
 # wechat-publish skill 构建产物
