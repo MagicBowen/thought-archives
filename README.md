@@ -1,6 +1,6 @@
 # thought-archives
 
-ThoughtArchives / 思想档案 is a MkDocs-based technical blog with a custom local theme.
+![ThoughtArchives / 思想档案](https://magicbowen.github.io/thought-archives/) is a MkDocs-based technical blog with a custom local theme.
 
 ## Local development
 
